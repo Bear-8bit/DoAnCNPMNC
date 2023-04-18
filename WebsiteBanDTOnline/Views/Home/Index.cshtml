@@ -1,23 +1,69 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/main_styles.css">
+<title>Colo Shop</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Colo Shop Template">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="~/styles/bootstrap4/bootstrap.min.css?version=1">
+<link href="~/plugins/font-awesome-4.7.0/css/font-awesome.min.css?version=1" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.carousel.css?version=1">
+<link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.theme.default.css?version=1">
+<link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/animate.css?version=1">
+<link rel="stylesheet" type="text/css" href="~/styles/main_styles.css?version=2">
+<link rel="stylesheet" type="text/css" href="~/styles/responsive.css?version=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 <!-- Slider -->
 
-<div class="main_slider" style="background-image: url('../../uploads/images/banner/slider-3.png');">
-    <div class="container fill_height">
-        <div class="row align-items-center fill_height">
-            <div class="col">
-                <div class="main_slider_content">
-                    <h6>Spring / Summer Collection 2017</h6>
-                    <h1>Get up to 30% Off New Arrivals</h1>
-                    <div class="red_button shop_now_button"><a href="#">shop now</a></div>
+<div class="main_slider">
+    <div style="display: block">
+        <div class="block-top-home is-flex">
+            <div class="block-top-home__sliding-banner">
+                <div class="block-sliding-home">
+                    <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="1">
+                                <img src="~/Website/Image/Slider/slider-1.jpg" />
+                            </div>
+                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="2">
+                                <img src="~/Website/Image/Slider/slider-2.jpg" />
+                            </div>
+                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="3">
+                                <img src="~/Website/Image/Slider/slider-7.jpg" />
+                            </div>
+                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="4">
+                                <img src="~/Website/Image/Slider/slidesr-4.jpg" />
+                            </div>
+                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="5">
+                                <img src="~/Website/Image/Slider/slider-6.png" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-top-home__right-banner">
+                <div class="right-banner">
+                    <a class="right-banner__item">
+                        <img src="~/Website/Image/Banner/banner1.jpg" class="right-banner__img" style="width: 700px; height: 120px;" />
+                    </a>
+                    <a class="right-banner__item">
+                        <img src="~/Website/Image/Banner/banner2.jpg" class="right-banner__img " />
+                    </a>
+                    <a class="right-banner__item">
+                        <img src="~/Website/Image/Banner/banner3.jpg" class="right-banner__img" style="width: 700px; height: 120px;" />
+                    </a>
                 </div>
             </div>
         </div>
+        <div class="horizontal-banner"></div>
     </div>
 </div>
-
 <!-- Banner -->
 @Html.Action("MenuProductCategory", "Menu")
 <!-- New Arrivals -->
@@ -161,3 +207,93 @@
         </div>
     </div>
 </div>
+<!-- Footer -->
+
+<footer class="footer" style="position: static; margin-top: 50px;">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Thông tin và chính sách</h4>
+                <ul>
+                    <li><a href="#">Mua hàng và thanh toán Online</a></li>
+                    <li><a href="#">Tra thông tin đơn hàng</a></li>
+                    <li><a href="#">Xem ưu đãi thành vi</a></li>
+                    <li><a href="#">Tra thông tin bảo hành</a></li>
+                    <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dịch vụ và thông tin khác</h4>
+                <ul>
+                    <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
+                    <li><a href="#">Ưu đãi thanh toán</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Chăm sóc khách hàng</h4>
+                <ul>
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                    <li><a href="#">Trả hàng và hoàn tiền</a></li>
+                    <li><a href="#">Chăm sóc khách hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                    <a href="#"><i class="ri-steam-fill"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<script src="~/styles/bootstrap4/popper.js"></script>
+<script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="~/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="~/plugins/easing/easing.js"></script>
+<script src="~/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".swiper-container", {
+        cssMode: true,
+        loop: true,
+        centeredSlide: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidePerview: 1,
+            },
+            768: {
+                slidePerview: 2,
+            },
+            1024: {
+                slidePerview: 3,
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
