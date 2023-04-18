@@ -150,6 +150,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductImageController.cs" />
@@ -210,6 +211,14 @@
     <Compile Include="Migrations\202304161730062_UpdateThongKe.cs" />
     <Compile Include="Migrations\202304161730062_UpdateThongKe.designer.cs">
       <DependentUpon>202304161730062_UpdateThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304180416174_Add-Migration Databasever1.0.cs" />
+    <Compile Include="Migrations\202304180416174_Add-Migration Databasever1.0.designer.cs">
+      <DependentUpon>202304180416174_Add-Migration Databasever1.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304180426251_UpdateOrder.cs" />
+    <Compile Include="Migrations\202304180426251_UpdateOrder.designer.cs">
+      <DependentUpon>202304180426251_UpdateOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -3318,6 +3327,9 @@
     <Content Include="Content\assets\plugins\themify-icons\fonts\themify.eot" />
     <Content Include="Content\assets\plugins\themify-icons\fonts\themify.ttf" />
     <Content Include="Content\assets\plugins\themify-icons\fonts\themify.woff" />
+    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\ViewOrder.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Partial_SanPham.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -3446,6 +3458,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304161730062_UpdateThongKe.resx">
       <DependentUpon>202304161730062_UpdateThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304180416174_Add-Migration Databasever1.0.resx">
+      <DependentUpon>202304180416174_Add-Migration Databasever1.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304180426251_UpdateOrder.resx">
+      <DependentUpon>202304180426251_UpdateOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
