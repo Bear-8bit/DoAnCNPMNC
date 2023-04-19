@@ -10,7 +10,6 @@ namespace WebsiteBanDTOnline.Controllers
 {
     public class HomeController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
             return View();
@@ -28,23 +27,6 @@ namespace WebsiteBanDTOnline.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-        [HttpPost]
-        public ActionResult Partial_Subcribe()
-        {
-            return PartialView();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Subscribe(Subcribe req)
-        {
-            if(ModelState.IsValid)
-            {
-                db.Subcribes.Add(new Subcribe { Email = req.Email, CreatedDate = DateTime.Now });
-                db.SaveChanges();
-                return Json(true);
-            }
-            return View("Partial_Subcribe");
         }
         public ActionResult Refresh() 
         {

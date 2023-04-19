@@ -159,7 +159,6 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
-    <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -220,14 +219,6 @@
     <Compile Include="Migrations\202304180426251_UpdateOrder.cs" />
     <Compile Include="Migrations\202304180426251_UpdateOrder.designer.cs">
       <DependentUpon>202304180426251_UpdateOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304181606369_UpdateSubcribe.cs" />
-    <Compile Include="Migrations\202304181606369_UpdateSubcribe.designer.cs">
-      <DependentUpon>202304181606369_UpdateSubcribe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304182037340_UpdateSubcribe1.cs" />
-    <Compile Include="Migrations\202304182037340_UpdateSubcribe1.designer.cs">
-      <DependentUpon>202304182037340_UpdateSubcribe1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -3398,15 +3389,10 @@
     <Content Include="Views\ShoppingCart\Partial_CheckOut.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOutSuccess.cshtml" />
     <Content Include="Views\Home\Refresh.cshtml" />
-    <Content Include="Views\New\Partial_New_Home.cshtml" />
-    <Content Include="Views\Home\Partial_Subcribe.cshtml" />
-    <Content Include="Views\New\Index.cshtml" />
-    <Content Include="Views\New\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\SystemSettings\" />
     <Folder Include="Content\ckfinder\userfiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -3478,12 +3464,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304180426251_UpdateOrder.resx">
       <DependentUpon>202304180426251_UpdateOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304181606369_UpdateSubcribe.resx">
-      <DependentUpon>202304181606369_UpdateSubcribe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304182037340_UpdateSubcribe1.resx">
-      <DependentUpon>202304182037340_UpdateSubcribe1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

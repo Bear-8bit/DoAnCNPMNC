@@ -91,7 +91,7 @@
                                         <td>@i</td>
                                         <td><img class="imgproduct" data-id="@item.Id" src="@item.ProductImages.FirstOrDefault(x => x.IsDefault).Image" width="50" /></td>
                                         <td>@item.ProductName</td>
-                                        <td>@item.ProductCate_ID</td>
+                                        <td>@item.ProductCategory?.Name</td>
                                         <td>@item.Quantity</td>
                                         <td>@item.Price</td>
                                         <td>@item.CreatedDate</td>

@@ -49,18 +49,6 @@ namespace WebsiteBanDTOnline
                 namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
             );
             routes.MapRoute(
-                name: "NewList",
-                url: "{alias}-n{id}",
-                defaults: new { controller = "New", action = "Details", alias = UrlParameter.Optional },
-                namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
-            );
-            routes.MapRoute(
-                name: "DetailNew",
-                url: "tin-túc",
-                defaults: new { controller = "New", action = "Index", alias = UrlParameter.Optional },
-                namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
-            );
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
