@@ -3,10 +3,13 @@
     ViewBag.Title = "Thanh toán";
 }
 <style>
-    .error {color: red;}
+    .error {
+        color: red;
+    }
 </style>
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css?version=1">
 <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 <div class="container product_section_container">
     <div class="row">
         <div class="col product_section clearfix">
@@ -33,7 +36,7 @@
             @if (ViewBag.CheckCart != null)
             {
                 <div class="row">
-                  
+
                     <div class="col-md-8">
                         @Html.Action("Partial_CheckOut", "ShoppingCart")
                     </div>
@@ -47,7 +50,7 @@
             else
             {
                 <div>
-                    Bạn chưa có sản phẩm nào 
+                    Bạn chưa có sản phẩm nào
                 </div>
             }
         </div>
@@ -84,10 +87,63 @@
                     'Phone': 'Bạn không để trống trường này',
                     'Address': 'Bạn không để trống trường này',
                     'Email': 'Email chưa hợp lệ'
-            });
+                });
         });
     </script>
 }
+<!-- Footer -->
+
+<footer class="footer" style="position: static; margin-top: 50px;">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Thông tin và chính sách</h4>
+                <ul>
+                    <li><a href="#">Mua hàng và thanh toán Online</a></li>
+                    <li><a href="#">Tra thông tin đơn hàng</a></li>
+                    <li><a href="#">Xem ưu đãi thành vi</a></li>
+                    <li><a href="#">Tra thông tin bảo hành</a></li>
+                    <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dịch vụ và thông tin khác</h4>
+                <ul>
+                    <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
+                    <li><a href="#">Ưu đãi thanh toán</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Chăm sóc khách hàng</h4>
+                <ul>
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                    <li><a href="#">Trả hàng và hoàn tiền</a></li>
+                    <li><a href="#">Chăm sóc khách hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                    <a href="#"><i class="ri-steam-fill"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
 
 
 
