@@ -24,7 +24,7 @@ namespace WebsiteBanDTOnline.Controllers
             {
                 Session["Id"] = user.Id;
                 Session["Email"] = user.Email;
-                return RedirectToAction("Authen", "Login");
+                return RedirectToAction("Index", "Home");
             }
             else
             {

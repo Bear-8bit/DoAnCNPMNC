@@ -242,6 +242,10 @@
     <Compile Include="Migrations\202304191559042_UpdateUser.designer.cs">
       <DependentUpon>202304191559042_UpdateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304191623216_UpdateDatabase1.cs" />
+    <Compile Include="Migrations\202304191623216_UpdateDatabase1.designer.cs">
+      <DependentUpon>202304191623216_UpdateDatabase1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -3511,6 +3515,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304191559042_UpdateUser.resx">
       <DependentUpon>202304191559042_UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304191623216_UpdateDatabase1.resx">
+      <DependentUpon>202304191623216_UpdateDatabase1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
