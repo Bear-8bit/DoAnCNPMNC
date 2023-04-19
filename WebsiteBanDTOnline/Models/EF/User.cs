@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WebsiteBanDTOnline.Models.EF
 {
-    [Table("tb_User")]
+    [Table("tb_Usexr")]
     public class User
     {
         [Key]
