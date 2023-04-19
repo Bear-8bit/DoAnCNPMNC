@@ -20,6 +20,7 @@ namespace WebsiteBanDTOnline.Models.EF
         [Required]
         [StringLength(150)]
         public string Name { get; set; }
+        public string Image { get; set; }
         [StringLength(150)]
         public string Alias { get; set; }
         public string Description { get; set; }

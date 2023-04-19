@@ -55,7 +55,7 @@ namespace WebsiteBanDTOnline.Controllers
         }
         public ActionResult Partical_ProductSales()
         {
-            var items = db.Products.Where(x => x.IsSale && x.IsActive).Take(12).ToList();
+            var items = db.Products.Where(x => x.IsHome && x.IsActive).Take(12).ToList();
             return PartialView(items);
         }
     }

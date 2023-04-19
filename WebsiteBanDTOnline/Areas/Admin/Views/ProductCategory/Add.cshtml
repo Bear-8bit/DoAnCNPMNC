@@ -61,6 +61,17 @@
                                 @Html.ValidationSummary(false)
                                 <!-- your steps content here -->
                                 <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+                                      <div class="form-group">
+                                         <label for="exampleInputFile">Hình ảnh</label>
+                                         <div class="input-group">
+                                             <div class="custom-file">
+                                                @Html.TextBoxFor(x => x.Image, new {@id="txtImage", @class="form-control"})
+                                             </div>
+                                             <div class="input-group-append">
+                                                 <input type="button" value="Tải ảnh" onclick="BrowseServer('txtImage');"/>
+                                             </div>
+                                         </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Tiêu đề</label>
                                         @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Tên danh mục" })
@@ -68,7 +79,7 @@
                                     </div>
                                     <div class="form-group">
                                         <a href="@Url.Action("Index","ProductCategory")" class="btn btn-danger">Quay lại</a>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary">Thêm mới</button>
                                     </div>
                                 </div>
                             }
@@ -90,17 +101,22 @@
 @section scripts{
     <script>
         $(document).ready(function () {
-            CKEDITOR.replace('txtDetail', {
+            var editor = CKEDITOR.replace('txtDetail', {
+                filebrowserBrowseUrl: '/Content/ckfinder/ckfinder.html',
+                filebrowserImageBrowseUrl: '/Content/ckfinder/ckfinder.html?type=Images',
+                filebrowserUploadUrl: '/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+                filebrowserImageUploadUrl: '/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images',
+                filebrowserWindowWidth: '1000',
+                filebrowserWindowHeight: '700',
                 customConfig: '/Content/ckeditor/config.js',
                 extraAllowedContent: 'span',
-               filebrowserBrowseUrl: '/browser/browse.php',
-               filebrowserUploadUrl: '/uploader/upload.php'
             });
+
         });
         function BrowseServer(field) {
             var finder = new CKFinder();
             finder.basePath = '/Content/ckfinder/';
-            finder.selectActionFunction = function(fileUrl) {
+            finder.selectActionFunction = function (fileUrl) {
                 document.getElementById(field).value = fileUrl;
             };
             finder.popup();
