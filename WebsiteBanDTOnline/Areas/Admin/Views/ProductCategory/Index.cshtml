@@ -68,6 +68,7 @@
                                     <td><input type="checkbox" class="cbkItem" value="@item.Id" /></td>
                                     <td>@i</td>
                                     <td>@item.Name</td>
+                                    <td><img src="@item.Image" style="width: 50px;" /></td>
                                     <td>@item.CreatedDate</td>
                                     <td class="text-center">
                                         <a href="@Url.Action("Edit","ProductCategory", new {id = item.Id})" class="btn btn-sm btn-primary">Sửa</a>
@@ -156,7 +157,7 @@
                 var conf = confirm(" Bạn có chắc chắn xóa không ?");
                 if (conf === true) {
                     $.ajax({
-                        url: "/Admin/News/Delete",
+                        url: "/Admin/ProductCategory/Delete",
                         type: 'POST',
                         data: { id: id },
                         success: function (rs) {

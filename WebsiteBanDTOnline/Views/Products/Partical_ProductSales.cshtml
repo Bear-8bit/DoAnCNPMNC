@@ -15,7 +15,7 @@
                 <div class="col">
                     <div class="product_slider_container">
                         <div class="owl-carousel owl-theme product_slider">
-
+                            <!-- Product 1 -->
                             @foreach (var item in Model)
                             {
                                 var strImage = "";
@@ -24,28 +24,31 @@
                                 {
                                     strImage = img.Image;
                                 }
-                                <!-- Product 1 -->
+
+
 
                                 <div class="owl-item product_slider_item">
-                                    <div class="product discount product_filter">
-                                        <div class="product_image">
-                                            <img src="@strImage" alt="@item.ProductName">
+                                    <div class="product-item @item.ProductCate_ID">
+                                        <div class="product">
+                                            <div class="product_image">
+                                                <img src="@strImage" alt="@item.ProductName">
+                                            </div>
+                                            <div class="favorite"></div>
+                                            <div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
+                                            <div class="product_info">
+                                                <h6 class="product_name"><a href="/chi-tiet/@item.Alias-@(item.Id)">@item.ProductName</a></h6>
+                                                @if (item.PriceSale > 0)
+                                                {
+                                                    <div class="product_price">@item.PriceSale<span>@item.Price</span></div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="product_price">@item.Price</div>
+                                                }
+                                            </div>
                                         </div>
-                                        <div class="favorite favorite_left"></div>
-                                        <div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
-                                        <div class="product_info">
-                                            <h6 class="product_name"><a href="/chi-tiet/@item.Alias-@(item.Id)">@item.ProductName</a></h6>
-                                            @if (item.PriceSale > 0)
-                                            {
-                                                <div class="product_price">@item.PriceSale<span>@item.Price</span></div>
-                                            }
-                                            else
-                                            {
-                                                <div class="product_price">@item.Price</div>
-                                            }
-                                        </div>
+                                        <div class="blue_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@item.Id">Thêm vào giỏ hàng</a></div>
                                     </div>
-                                        <div class="red_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@item.Id">add to cart</a></div>
                                 </div>
                             }
 
@@ -65,3 +68,5 @@
         </div>
     </div>
 }
+
+

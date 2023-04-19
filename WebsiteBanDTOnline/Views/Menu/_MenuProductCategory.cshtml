@@ -9,9 +9,9 @@
             <div class="row">
                 @foreach (var item in Model)
                 {
-                    <div class="col-md-3" >
-                        <div class="banner_item align-items-center" style="background-image: url(../Content/assets/images/banner_1.jpg)">
-                            <div class="banner_category">
+                    <div class="col-md-4" >
+                        <div class="banner_item align-items-center rounded-2" style="background-image: url(@item.Image)">
+                            <div class="banner_category rounded-2">
                                 <a href="@item.Alias">@item.Name</a>
                             </div>
                         </div>
