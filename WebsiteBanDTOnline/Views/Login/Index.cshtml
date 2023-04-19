@@ -1,0 +1,41 @@
+﻿
+@model WebsiteBanDTOnline.Models.EF.User
+@{
+    ViewBag.Title = "Đăng nhập";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="~/styles/login_styles.css" rel="stylesheet" />
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    @using (Html.BeginForm("Authen", "Login", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="center">
+            <h1>Đăng nhập</h1>
+            <form method="post">
+                <div class="txt_field">
+                    @Html.LabelFor(x => x.Email)
+                    @Html.TextBoxFor(x => x.Email)
+                </div>
+                <div class="txt_field">
+                    @Html.LabelFor(x => x.Password)
+                    @Html.TextBoxFor(x => x.Password)
+                </div>
+                <div class="pass">Quên mật khẩu?</div>
+                <input type="submit" value="Đăng nhập">
+                <div class="signup_link">
+                    Không phải là thành viên? <a href="@Url.Action("Register", "Login")">Đăng ký</a>
+                </div>
+            </form>
+        </div>
+    }
+</body>
+</html>

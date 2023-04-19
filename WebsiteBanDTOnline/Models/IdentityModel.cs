@@ -36,6 +36,7 @@ namespace WebsiteBanDTOnline.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrdersDetail { get; set; }
         public DbSet<Subcribe> Subcribes { get; set; }
+        public DbSet<User> Userxs { get; set; }
 
         public static ApplicationDbContext Create() 
         {
