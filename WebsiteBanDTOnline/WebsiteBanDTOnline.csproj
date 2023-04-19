@@ -229,6 +229,10 @@
     <Compile Include="Migrations\202304182037340_UpdateSubcribe1.designer.cs">
       <DependentUpon>202304182037340_UpdateSubcribe1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304191534492_Users.cs" />
+    <Compile Include="Migrations\202304191534492_Users.designer.cs">
+      <DependentUpon>202304191534492_Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -247,6 +251,7 @@
     <Compile Include="Models\EF\Subcribe.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\EF\ThongKe.cs" />
+    <Compile Include="Models\EF\User.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
@@ -3484,6 +3489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304182037340_UpdateSubcribe1.resx">
       <DependentUpon>202304182037340_UpdateSubcribe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304191534492_Users.resx">
+      <DependentUpon>202304191534492_Users.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
