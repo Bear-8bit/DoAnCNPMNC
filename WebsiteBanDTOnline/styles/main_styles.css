@@ -52,7 +52,6 @@ COLOR PALETTE
 }
 body
 {
-	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	line-height: 23px;
 	font-weight: 400;
@@ -74,7 +73,6 @@ ul
 }
 p
 {
-	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	line-height: 1.7;
 	font-weight: 500;
@@ -279,7 +277,6 @@ img[AttributesStyle]{
     margin-bottom: 15px;
     margin-top: 6.5em;
     box-shadow: rgba(0,0,0,.5);
-    width: 80%;
 }
 .is-flex{
     display: flex;
@@ -927,12 +924,13 @@ img[AttributesStyle]{
 
 .main_slider
 {
-	width: 100%;
-	height: 400px;
+	padding-left: 180px;
+	width: 87%;
+	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	margin-top: 150px;
+	margin-top: 120px;
 }
 .main_slider_content
 {

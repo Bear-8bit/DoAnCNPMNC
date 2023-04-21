@@ -7,8 +7,8 @@
         color: red;
     }
 </style>
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css?version=1">
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">
+<link rel="stylesheet" type="text/css" href="~/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/categories_responsive.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 <div class="container product_section_container">
     <div class="row">
@@ -18,8 +18,9 @@
 
             <div class="breadcrumbs d-flex flex-row align-items-center">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's</a></li>
+                    <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                    <li><a href="@Url.Action("Index","ShoppingCart")"><i class="fa fa-angle-right" ></i>Giỏ hàng</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Thanh toán</a></li>
                 </ul>
             </div>
 
@@ -35,17 +36,18 @@
             <hr />
             @if (ViewBag.CheckCart != null)
             {
-                <div class="row">
+                <div class="container" style="width:60%;">
+                    <div class="row">
 
-                    <div class="col-md-8">
-                        @Html.Action("Partial_CheckOut", "ShoppingCart")
-                    </div>
-                    <div class="col-md-4">
-                        @Html.Action("Partical_Item_ThanhToan", "ShoppingCart")
+                        <div class="col-md-6 ml-5">
+                            @Html.Action("Partial_CheckOut", "ShoppingCart")
+                        </div>
+                        <div class="col-md-5">
+                            @Html.Action("Partical_Item_ThanhToan", "ShoppingCart")
 
+                        </div>
                     </div>
                 </div>
-
             }
             else
             {
@@ -58,7 +60,7 @@
 </div>
 @section scripts{
     <script src="~/Content/assets/js/categories_custom.js"></script>
-    <script src="~/Scripts/jsShopping.js?verion=1"></script>
+    <script src="~/Scripts/jsShopping.js"></script>
     <script>
         function OnSuccessCO(rs) {
             if (rs.Success) {

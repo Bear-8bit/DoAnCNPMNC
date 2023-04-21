@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Giỏ hàng";
 }
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css?version=1">
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">
+<link rel="stylesheet" type="text/css" href="~/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/categories_responsive.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 <div class="container product_section_container">
     <div class="row">
@@ -14,7 +14,7 @@
 
             <div class="breadcrumbs d-flex flex-row align-items-center">
                 <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
                     <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Giỏ hàng</a></li>
                 </ul>
             </div>

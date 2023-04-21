@@ -24,10 +24,10 @@
                 <tr class="text-center" id="trow_@item.ProductId">
                     <td>@(i+1)</td>
                     <td><img src="@item.ProductImg" style="width: 60px;" /></td>
-                    <td><a href="/chi-tiet/@item.Alias-@(item.ProductId) ">@item.ProductName</a></td>
+                    <td><a href="/chi-tiet/@item.Alias-@(item.ProductId) " style="color: #162938;">@item.ProductName</a></td>
                     <td>@item.CategoryName</td>
                     <td>@Common.FormatNumber(item.Price, 0)</td>
-                    <td><input type="number" class="form-control" id="Quantity_@item.ProductId" value="@item.Quantity" /></td>
+                    <td><input type="number" class="form-control" id="Quantity_@item.ProductId" value="@item.Quantity" style="color: #162938;"/></td>
                     <th>@Common.FormatNumber(item.TotalPrice, 2)</th>
                     <td>
                         <a href="#" data-id="@item.ProductId" class="btn btn-sm btn-danger btnDelete">Xóa</a>
