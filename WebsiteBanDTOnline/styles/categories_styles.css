@@ -48,7 +48,6 @@ COLOR PALETTE
 }
 body
 {
-	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	line-height: 23px;
 	font-weight: 400;
@@ -70,7 +69,6 @@ ul
 }
 p
 {
-	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	line-height: 1.7;
 	font-weight: 500;
@@ -961,8 +959,6 @@ section
 .product_sorting li ul li
 {
 	display: block;
-	text-align: center;
-	padding-left: 10px;
 	padding-right: 10px;
 }
 .product_sorting li ul li span
@@ -1142,7 +1138,7 @@ section
 
 .product_section_container
 {
-	margin-top: 150px;
+	margin-top: 120px;
 }
 .product_section
 {
