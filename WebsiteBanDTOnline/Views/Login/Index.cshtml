@@ -3,39 +3,52 @@
 @{
     ViewBag.Title = "Đăng nhập";
 }
-
+<link rel="stylesheet" type="text/css" href="~/styles/bootstrap4/bootstrap.min.css?version=1">
+<link href="~/plugins/font-awesome-4.7.0/css/font-awesome.min.css?version=1" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="~/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/responsive.css?version=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-<link href="~/styles/login_styles.css" rel="stylesheet" />
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title>Animated Login Form | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<link href="~/styles/login.css" rel="stylesheet" />
+
+
+
 <body>
     @using (Html.BeginForm("Authen", "Login", FormMethod.Post))
     {
-        @Html.AntiForgeryToken()
-        <div class="center">
-            <h1>Đăng nhập</h1>
-            <form method="post">
-                <div class="txt_field">
-                    @Html.LabelFor(x => x.Email)
-                    @Html.TextBoxFor(x => x.Email)
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="">
+                        <h2>Đăng nhập</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            @Html.TextBoxFor(x => x.Email, new { @type = "email", autocomplete = "off" })
+                            <label for="">Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            @Html.TextBoxFor(x => x.Password, new { @type = "password", autocomplete = "off" })
+                            <label for="">Mật khẩu</label>
+                        </div>
+                        <div class="forget">
+                            <label for=""><input type="checkbox">Nhớ tài khoản </label>
+                            <a href="#"style="color: #fff;">Quên mật khẩu</a>
+                        </div>
+                        <button>Đăng nhập</button>
+                        <div class="register" style="color: #fff;">
+                            <p  style="color: #fff;">Không có tài khoản <a href="@Url.Action("Register","Login")">Đăng ký</a></p>
+                        </div>
+                    </form>
                 </div>
-                <div class="txt_field">
-                    @Html.LabelFor(x => x.Password)
-                    @Html.TextBoxFor(x => x.Password)
-                </div>
-                <div class="pass">Quên mật khẩu?</div>
-                <input type="submit" value="Đăng nhập">
-                <div class="signup_link">
-                    Không phải là thành viên? <a href="@Url.Action("Register", "Login")">Đăng ký</a>
-                </div>
-            </form>
-        </div>
+            </div>
+        </section>
+
     }
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-</html>
+
