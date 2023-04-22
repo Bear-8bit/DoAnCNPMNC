@@ -3,9 +3,8 @@
 @{
     ViewBag.Title = "Đăng nhập";
 }
-
+<link href="~/styles/login.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-<link href="~/styles/login_styles.css" rel="stylesheet" />
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
@@ -17,25 +16,36 @@
 <body>
     @using (Html.BeginForm("Authen", "Login", FormMethod.Post))
     {
-        @Html.AntiForgeryToken()
-        <div class="center">
-            <h1>Đăng nhập</h1>
-            <form method="post">
-                <div class="txt_field">
-                    @Html.LabelFor(x => x.Email)
-                    @Html.TextBoxFor(x => x.Email)
-                </div>
-                <div class="txt_field">
-                    @Html.LabelFor(x => x.Password)
-                    @Html.TextBoxFor(x => x.Password)
-                </div>
-                <div class="pass">Quên mật khẩu?</div>
-                <input type="submit" value="Đăng nhập">
-                <div class="signup_link">
-                    Không phải là thành viên? <a href="@Url.Action("Register", "Login")">Đăng ký</a>
-                </div>
-            </form>
-        </div>
+           <section>
+               <div class="form-box">
+                   <div class="form-value">
+                       <form action="">
+                           <h2>Đăng nhập</h2>
+                           <div class="inputbox">
+                               <ion-icon name="mail-outline"></ion-icon>
+                               @Html.TextBoxFor(x => x.Email, new { @type = "email" })
+                               <label for="">Email</label>
+                           </div>
+                           <div class="inputbox">
+                               <ion-icon name="lock-closed-outline"></ion-icon>
+                               @Html.TextBoxFor(x => x.Password, new { @type = "password" })
+                               <label for="">Mật khẩu</label>
+                           </div>
+                           <div class="forget">
+                               <label for=""><input type="checkbox">Nhớ tài khoản </label>
+                               <a href="#">Quên mật khẩu</a>
+                           </div>
+                           <button>Log in</button>
+                           <div class="register" style="color: #fff;">
+                               <p>Không có tài khoản <a href="#">Đăng ký</a></p>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+           </section>
+         
     }
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
