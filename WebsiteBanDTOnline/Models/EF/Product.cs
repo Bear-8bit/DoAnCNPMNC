@@ -33,6 +33,7 @@ namespace WebsiteBanDTOnline.Models.EF
         public string Image { get; set; }
         public decimal Price { get; set; }
         public decimal? PriceSale { get; set;}
+        public decimal OriginalPrice { get; set; }
         public bool IsHome { get; set; }
         public bool IsSale { get; set; }
         public bool IsFeature { get; set; } 

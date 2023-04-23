@@ -155,6 +155,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThongKeDoanhThuController.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -245,6 +246,10 @@
     <Compile Include="Migrations\202304191623216_UpdateDatabase1.cs" />
     <Compile Include="Migrations\202304191623216_UpdateDatabase1.designer.cs">
       <DependentUpon>202304191623216_UpdateDatabase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304230420306_UpdateOriginPrice.cs" />
+    <Compile Include="Migrations\202304230420306_UpdateOriginPrice.designer.cs">
+      <DependentUpon>202304230420306_UpdateOriginPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -3578,6 +3583,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\SystemSettings\" />
+    <Folder Include="Areas\Admin\Views\ThongKeDoanhThu\" />
     <Folder Include="Content\ckfinder\userfiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -3667,6 +3673,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304191623216_UpdateDatabase1.resx">
       <DependentUpon>202304191623216_UpdateDatabase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304230420306_UpdateOriginPrice.resx">
+      <DependentUpon>202304230420306_UpdateOriginPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
