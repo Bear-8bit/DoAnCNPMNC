@@ -22,9 +22,9 @@ namespace WebsiteBanDTOnline.Controllers
             var check = db.Userxs.Where(x => x.Email.Equals(user.Email) && x.Password.Equals(user.Password)).FirstOrDefault();
             if (check != null)
             {
-                Session["Id"] = user.Id;
-                Session["Email"] = user.Email;
-                return RedirectToAction("Index", "Home");
+                    Session["Id"] = user.Id;
+                    Session["Email"] = user.Email;
+                    return RedirectToAction("Index", "Home");
             }
             else
             {
