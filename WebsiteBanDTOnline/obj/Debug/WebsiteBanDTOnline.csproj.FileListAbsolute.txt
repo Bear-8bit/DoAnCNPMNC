@@ -333,3 +333,4 @@ C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateUser.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateDatabase1.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateOriginPrice.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateProductDetail.resources

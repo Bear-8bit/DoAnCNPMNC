@@ -251,6 +251,10 @@
     <Compile Include="Migrations\202304230420306_UpdateOriginPrice.designer.cs">
       <DependentUpon>202304230420306_UpdateOriginPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304240502439_UpdateProductDetail.cs" />
+    <Compile Include="Migrations\202304240502439_UpdateProductDetail.designer.cs">
+      <DependentUpon>202304240502439_UpdateProductDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -3650,6 +3654,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304230420306_UpdateOriginPrice.resx">
       <DependentUpon>202304230420306_UpdateOriginPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304240502439_UpdateProductDetail.resx">
+      <DependentUpon>202304240502439_UpdateProductDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
