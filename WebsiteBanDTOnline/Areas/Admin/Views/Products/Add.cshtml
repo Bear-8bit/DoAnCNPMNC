@@ -86,10 +86,15 @@
                                                     @Html.ValidationMessageFor(x => x.ProductCode, null, new { @class = "text-danger" })
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="exampleInputPassword1">Chi Tiết</label>
+                                                    @Html.TextAreaFor(x => x.Detail, new { @class = "form-control", @id = "txtDetail" })
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="exampleInputEmail1">Danh mục</label>
-                                                    @Html.DropDownListFor(x => x.ProductCate_ID, ViewBag.ProductCategory as SelectList,"Chọn danh mục sản phẩm", new { @class = "form-control", @placeholder = "Danh mục sản phẩm" })
+                                                    @Html.DropDownListFor(x => x.ProductCate_ID, ViewBag.ProductCategory as SelectList, "Chọn danh mục sản phẩm", new { @class = "form-control", @placeholder = "Danh mục sản phẩm" })
                                                     @Html.ValidationMessageFor(x => x.ProductCate_ID, null, new { @class = "text-danger" })
                                                 </div>
+
                                                 <div class="row">
                                                     <div class="col-3">
                                                         <div class="form-group">
@@ -134,19 +139,19 @@
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
-                                                            @Html.CheckBoxFor(x => x.IsHot, new { @class = "custom-control-input", @id = "IsHotCheckbox"})
+                                                            @Html.CheckBoxFor(x => x.IsHot, new { @class = "custom-control-input", @id = "IsHotCheckbox" })
                                                             <label for="IsHotCheckbox" class="custom-control-label">Hot</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
-                                                            @Html.CheckBoxFor(x => x.IsFeature, new { @class = "custom-control-input", @id = "IsFeatureCheckbox"})
+                                                            @Html.CheckBoxFor(x => x.IsFeature, new { @class = "custom-control-input", @id = "IsFeatureCheckbox" })
                                                             <label for="IsFeatureCheckbox" class="custom-control-label">Nổi bật</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
-                                                            @Html.CheckBoxFor(x => x.IsSale, new { @class = "custom-control-input", @id = "IsSaleCheckbox"})
+                                                            @Html.CheckBoxFor(x => x.IsSale, new { @class = "custom-control-input", @id = "IsSaleCheckbox" })
                                                             <label for="IsSaleCheckbox" class="custom-control-label">Khuyến mãi</label>
                                                         </div>
                                                     </div>
