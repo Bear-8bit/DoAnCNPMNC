@@ -37,6 +37,7 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Add(Product model, List<string> Images, List<int> rDefault) 
         {
             if(ModelState.IsValid) 
@@ -92,6 +93,7 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit(Product model)
         {
             if (ModelState.IsValid)
