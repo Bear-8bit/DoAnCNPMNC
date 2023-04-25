@@ -42,7 +42,7 @@
 
     $('body').on('click', '.btnDelete', function (e) {
         e.preventDefault();
-        var id = $(this).data("id");
+        var id = $(this).attr(id);
         var conf = confirm(" Bạn có chắc chắn xóa không ?");
         if (conf === true) {
             $.ajax({
