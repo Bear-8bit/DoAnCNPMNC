@@ -40,12 +40,13 @@
     });
 
 
-    $('body').on('click', '.btnDelete', function () {
-        var id = data('id');
+    $('body').on('click', '.btnDelete', function (e) {
+        e.preventDefault();
+        var id = $(this).data("id");
         var conf = confirm(" Bạn có chắc chắn xóa không ?");
         if (conf === true) {
             $.ajax({
-                url: '/shoppingcart/Delete',
+                url: "/shoppingcart/delete",
                 type: 'POST',
                 data: { id: id },
                 success: function (rs) {
@@ -57,7 +58,6 @@
             });
         }
     });
-
 });
 
 function ShowCount() {
