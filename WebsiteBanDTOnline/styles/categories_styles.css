@@ -99,7 +99,7 @@ a, a:hover, a:visited, a:active, a:link
 p a:active
 {
 	position: relative;
-	color: #FF6347;
+	color: #162938;
 }
 p a:hover
 {
@@ -1163,11 +1163,11 @@ section
 }
 .sidebar_categories li.active a
 {
-	color: #fe4c50;
+	color: #162938;
 }
 .sidebar_categories li.active:hover a
 {
-	color: #fe4c50;
+	color: #162938;
 }
 .sidebar_categories li a
 {

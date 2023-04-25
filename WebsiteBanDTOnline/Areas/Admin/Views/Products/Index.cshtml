@@ -90,156 +90,180 @@
                                         <td><input type="checkbox" class="cbkItem" value="@item.Id" /></td>
                                         <td>@i</td>
                                         <td><img class="imgproduct" data-id="@item.Id" src="@item.ProductImages.FirstOrDefault(x => x.IsDefault).Image" width="50" /></td>
-                                        <td>@item.ProductName</td>
-                                        <td>@item.ProductCate_ID</td>
-                                        <td>@item.Quantity</td>
-                                        <td>@item.Price</td>
-                                        <td>@item.CreatedDate</td>
-                                        <td>
-                                            <a href='#' data-id="@item.Id" class="btnSale">
-                                                @Html.Raw(strCheckSale)
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href='#' data-id="@item.Id" class="btnHome">
-                                                @Html.Raw(strCheckHome)
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href='#' data-id="@item.Id" class="btnActive">
-                                                @Html.Raw(strCheck)
-                                            </a>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="@Url.Action("Edit","Products", new {id = item.Id})" class="btn btn-sm btn-primary">Sửa</a>
-                                            <a href="#" data-id="@item.Id" class="btn btn-sm btn-danger btnDelete">Xóa</a>
-                                        </td>
-                                    </tr>
-                                    i++;
+                                            <td>@item.ProductName</td>
+                                            <td>@item.ProductCate_ID</td>
+                                            <td>@item.Quantity</td>
+                                            <td>@item.Price</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>
+                                                <a href='#' data-id="@item.Id" class="btnSale">
+                                                    @Html.Raw(strCheckSale)
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href='#' data-id="@item.Id" class="btnHome">
+                                                    @Html.Raw(strCheckHome)
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href='#' data-id="@item.Id" class="btnActive">
+                                                    @Html.Raw(strCheck)
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="@Url.Action("Edit","Products", new {id = item.Id})" class="btn btn-sm btn-primary">Sửa</a>
+                                                <a href="#" data-id="@item.Id" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                                            </td>
+                                        </tr>
+                                        i++;
+                                    }
                                 }
-                            }
-                            else
-                            {
-                                <tr>
-                                    <td colspan="4">Không có bản ghi nào</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="4">Không có bản ghi nào</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
 
-                    <div class="row">
-                        <div class="col-6"></div>
-                        <div class="col-6" style="text-align: right;">
-                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                        <div class="row">
+                            <div class="col-6"></div>
+                            <div class="col-6" style="text-align: right;">
+                                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                            </div>
                         </div>
+
                     </div>
+                    <div class="card-footer">
 
+                    </div>
                 </div>
-                <div class="card-footer">
-
-                </div>
+            </section>
+            <div id="dialog">
+                <iframe id="myIframe" style="border: 0; width: 100%; height: 100%;"></iframe>
             </div>
-        </section>
-        <div id="dialog">
-            <iframe id="myIframe" style="border: 0; width: 100%; height: 100%;"></iframe>
-        </div>
-    }
-    @section scripts{
-        <script>
-                $("#dialog").dialog({
-                    autoOpen: false,
-                    show: "fade",
-                    hide: "fade",
-                    modal: true,
-                    height: '600',
-                    widht: '700',
-                    resizeable: true,
-                    title: 'Quản lý ảnh sản phẩm',
-                    close: function () {
-                        window.location.reload();
-                    }
-                });
-                $('body').on('click','.imgproduct', function () {
-                    var proid = $(this).attr('data-id');
-                    $('#dialog #myIframe').attr("src", "/Admin/ProductImage/Index?id=" + proid);
-                    $('#dialog').dialog('open');
-                    return false;
-                });
-
-
-                $('body').on('click', '#BtnDeleteAll', function () {
-                    var str = "";
-                    var checkbox = $(this).parents('.card').find('tr td input:checkbox');
-                    var i = 0;
-                    checkbox.each(function () {
-                        if (this.checked) {
-                            checkbox.attr('selected', 'checked');
-                            var _id = $(this).val();
-                            if (i === 0) {
-                                str += _id;
-                            } else {
-                                str += "," + _id;
-                            }
-                            i++;
-                        }
-                        else {
-                            checkbox.attr('selected', '');
+        }
+        @section scripts{
+            <script>
+                    $("#dialog").dialog({
+                        autoOpen: false,
+                        show: "fade",
+                        hide: "fade",
+                        modal: true,
+                        height: '600',
+                        widht: '700',
+                        resizeable: true,
+                        title: 'Quản lý ảnh sản phẩm',
+                        close: function () {
+                            window.location.reload();
                         }
                     });
-                    if (str.length > 0) {
-                        var conf = confirm('Bạn có chắc chắn muốn xóa các mục này không ?')
+                    $('body').on('click','.imgproduct', function () {
+                        var proid = $(this).attr('data-id');
+                        $('#dialog #myIframe').attr("src", "/Admin/ProductImage/Index?id=" + proid);
+                        $('#dialog').dialog('open');
+                        return false;
+                    });
+
+
+                    $('body').on('click', '#BtnDeleteAll', function () {
+                        var str = "";
+                        var checkbox = $(this).parents('.card').find('tr td input:checkbox');
+                        var i = 0;
+                        checkbox.each(function () {
+                            if (this.checked) {
+                                checkbox.attr('selected', 'checked');
+                                var _id = $(this).val();
+                                if (i === 0) {
+                                    str += _id;
+                                } else {
+                                    str += "," + _id;
+                                }
+                                i++;
+                            }
+                            else {
+                                checkbox.attr('selected', '');
+                            }
+                        });
+                        if (str.length > 0) {
+                            var conf = confirm('Bạn có chắc chắn muốn xóa các mục này không ?')
+                            if (conf === true) {
+                                $.ajax({
+                                    url: "/Admin/Products/DeleteAll",
+                                    type: 'POST',
+                                    data: { ids: str },
+                                    success: function (rs) {
+                                        if (rs.success) {
+                                            location.reload();
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
+                    $('body').on('change', '#SelectAll', function () {
+                        var checkStatus = this.checked;
+                        var checkbox = $(this).parents('.card-body').find('tr td input:checkbox');
+                        checkbox.each(function () {
+                            this.checked = checkStatus;
+                            if (this.checked) {
+                                checkbox.attr('selected', 'checked');
+                            }
+                            else {
+                                checkbox.attr('selected', '');
+                            }
+                        });
+                    });
+
+
+                    $('body').on('click', '.btnDelete', function () {
+                        var id = $(this).data("id");
+                        var conf = confirm(" Bạn có chắc chắn xóa không ?");
                         if (conf === true) {
                             $.ajax({
-                                url: "/Admin/Products/DeleteAll",
+                                url: "/Admin/Products/Delete",
                                 type: 'POST',
-                                data: { ids: str },
+                                data: { id: id },
                                 success: function (rs) {
                                     if (rs.success) {
+                                        $('#trow_' + id).remove();
                                         location.reload();
                                     }
                                 }
                             });
                         }
-                    }
-                });
-                $('body').on('change', '#SelectAll', function () {
-                    var checkStatus = this.checked;
-                    var checkbox = $(this).parents('.card-body').find('tr td input:checkbox');
-                    checkbox.each(function () {
-                        this.checked = checkStatus;
-                        if (this.checked) {
-                            checkbox.attr('selected', 'checked');
-                        }
-                        else {
-                            checkbox.attr('selected', '');
-                        }
                     });
-                });
-               
-
-                $('body').on('click', '.btnDelete', function () {
-                    var id = $(this).data("id");
-                    var conf = confirm(" Bạn có chắc chắn xóa không ?");
-                    if (conf === true) {
+                    $('body').on('click', '.btnActive', function (e) {
+                        e.preventDefault();
+                        var btn = $(this)
+                        var id = btn.data("id");
                         $.ajax({
-                            url: "/Admin/Products/Delete",
+                            url: "/Admin/Products/IsActive",
                             type: 'POST',
                             data: { id: id },
                             success: function (rs) {
+                                debugger;
                                 if (rs.success) {
-                                    $('#trow_' + id).remove();
-                                    location.reload();
+                                    if (rs.IsActive) {
+                                        btn.html("<i class='fa fa-check text-success'></i>");
+                                        location.reload();
+                                    }
+                                    else {
+                                        btn.html("<i class='fas fa-times text-danger'></i>");
+                                        location.reload();
+                                    }
                                 }
+
                             }
                         });
-                    }
-                });
-                $('body').on('click', '.btnActive', function (e) {
+                    });
+                $('body').on('click', '.btnHome', function (e) {
                     e.preventDefault();
                     var btn = $(this)
                     var id = btn.data("id");
                     $.ajax({
-                        url: "/Admin/Products/IsActive",
+                        url: "/Admin/Products/IsHome",
                         type: 'POST',
                         data: { id: id },
                         success: function (rs) {
@@ -258,54 +282,30 @@
                         }
                     });
                 });
-            $('body').on('click', '.btnHome', function (e) {
-                e.preventDefault();
-                var btn = $(this)
-                var id = btn.data("id");
-                $.ajax({
-                    url: "/Admin/Products/IsHome",
-                    type: 'POST',
-                    data: { id: id },
-                    success: function (rs) {
-                        debugger;
-                        if (rs.success) {
-                            if (rs.IsActive) {
-                                btn.html("<i class='fa fa-check text-success'></i>");
-                                location.reload();
-                            }
-                            else {
-                                btn.html("<i class='fas fa-times text-danger'></i>");
-                                location.reload();
-                            }
-                        }
 
-                    }
+                    $('body').on('click', '.btnSale', function (e) {
+                        e.preventDefault();
+                        var btn = $(this)
+                        var id = btn.data("id");
+                        $.ajax({
+                            url: "/Admin/Products/IsSale",
+                            type: 'POST',
+                            data: { id: id },
+                            success: function (rs) {
+                                debugger;
+                                if (rs.success) {
+                                    if (rs.IsSale) {
+                                        btn.html("<i class='fa fa-check text-success'></i>");
+                                        location.reload();
+                                    }
+                                    else {
+                                        btn.html("<i class='fas fa-times text-danger'></i>");
+                                        location.reload();
+                                    }
+                                }
+
+                            }
+                        });
                 });
-            });
-
-                $('body').on('click', '.btnSale', function (e) {
-                    e.preventDefault();
-                    var btn = $(this)
-                    var id = btn.data("id");
-                    $.ajax({
-                        url: "/Admin/Products/IsSale",
-                        type: 'POST',
-                        data: { id: id },
-                        success: function (rs) {
-                            debugger;
-                            if (rs.success) {
-                                if (rs.IsSale) {
-                                    btn.html("<i class='fa fa-check text-success'></i>");
-                                    location.reload();
-                                }
-                                else {
-                                    btn.html("<i class='fas fa-times text-danger'></i>");
-                                    location.reload();
-                                }
-                            }
-
-                        }
-                    });
-            });
-        </script>
-    }
+            </script>
+        }
