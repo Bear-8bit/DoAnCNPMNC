@@ -42,7 +42,7 @@
 
     $('body').on('click', '.btnDelete', function (e) {
         e.preventDefault();
-        var id = $(this).attr(id);
+        var id = $(this).data('id');
         var conf = confirm(" Bạn có chắc chắn xóa không ?");
         if (conf === true) {
             $.ajax({
@@ -57,6 +57,7 @@
                 }
             });
         }
+        location.reload();
     });
 });
 
