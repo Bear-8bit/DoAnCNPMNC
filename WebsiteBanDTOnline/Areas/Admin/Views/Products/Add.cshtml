@@ -123,7 +123,7 @@
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail">Giá nhập</label>
                                                             <input type="text" name="demoPriceSale" id="demoPriceSale" value="0" class="form-control auto" data-a-sign="" data-a-dec="," data-a-sep="." />
-                                                            @Html.HiddenFor(x => x.PriceSale, new { @class = "", @placeholder = "Giá nhập" })
+                                                            @Html.HiddenFor(x => x.OriginalPrice, new { @class = "", @placeholder = "Giá nhập" })
                                                             @Html.ValidationMessageFor(x => x.OriginalPrice, null, new { @class = "text-danger" })
                                                         </div>
                                                     </div>
