@@ -3,7 +3,7 @@
     $('body').on('click', '.btnAddToCart', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
-        var quantity = 1;
+        var quantity = 0;
         var tQuantity = $('#quantity_value').text();
         if (tQuantity != '') {
             quantity = parseInt(tQuantity);
