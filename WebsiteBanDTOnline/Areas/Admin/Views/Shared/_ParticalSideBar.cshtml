@@ -24,10 +24,10 @@
 
     <!-- Sidebar Menu -->
     <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column"   data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
     with font-awesome or any other icon font library -->
-            <li class="nav-item" >
+            <li class="nav-item">
                 <a href="@Url.Action("Index","ThongKeDoanhThu")" class="nav-link" style="color: #fff;">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="@Url.Action("Index","Category")" class="nav-link" style="color: #fff;"> 
+                <a href="@Url.Action("Index","Category")" class="nav-link" style="color: #fff;">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
                         Quản lý danh mục
@@ -53,7 +53,7 @@
                     </p>
                 </a>
             </li>
-          
+
             <li class="nav-item">
                 <a href="@Url.Action("Index","Products")" class="nav-link" style="color: #fff;">
                     <i class="nav-icon fas fa-th"></i>
@@ -87,8 +87,19 @@
                     </p>
                 </a>
             </li>
-        </ul>
+
+                <li class="nav-item">
+                    <a href="@Url.Action("LogOut", "Login")" class="nav-link" style="color: #fff;">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Đăng xuất
+                            <span class="right badge badge-danger"></span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
     </nav>
     <!-- /.sidebar-menu -->
 </div>
 <!-- /.sidebar -->
+    
