@@ -322,7 +322,7 @@ jQuery(document).ready(function($)
 	            getSortData: {
 	            	price: function(itemElement)
 	            	{
-	            		var priceEle = $(itemElement).find('.in_product_price').text().replace( 'đ', '' );
+	            		var priceEle = $(itemElement).find('in_product_price').text().replace( 'đ', '' );
 	            		return parseFloat(priceEle);
 	            	},
 	            	name: '.product_name'
@@ -365,9 +365,9 @@ jQuery(document).ready(function($)
 		            filter: function()
 		            {
 		            	var priceRange = $('#amount').val();
-			        	var priceMin = parseFloat(priceRange.split('-')[0].replace('$', ''));
-			        	var priceMax = parseFloat(priceRange.split('-')[1].replace('$', ''));
-			        	var itemPrice = $(this).find('.product_price').clone().children().remove().end().text().replace( '$', '' );
+			        	var priceMin = parseFloat(priceRange.split('-')[0].replace('đ', ''));
+			        	var priceMax = parseFloat(priceRange.split('-')[1].replace('đ', ''));
+			        	var itemPrice = $(this).find('.product_price').clone().children().remove().end().text().replace( 'đ', '' );
 
 			        	return (itemPrice > priceMin) && (itemPrice < priceMax);
 		            },

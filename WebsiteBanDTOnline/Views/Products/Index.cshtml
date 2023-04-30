@@ -162,17 +162,19 @@
                                                 </div>
                                                 <div class="favorite favorite_left"></div>
                                                 @*<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>*@
-                                                <div class="product_info">
-                                                    <h6 class="product_name"><a href="/chi-tiet/@item.Alias-@(item.Id)">@item.ProductName</a></h6>
-                                                    @if (item.PriceSale > 0)
-                                                    {
-                                                        <div class="product_price" style="color: #162938;">@WebsiteBanDTOnline.Common.Common.FormatNumber(item.PriceSale, 0) đ<span>@WebsiteBanDTOnline.Common.Common.FormatNumber(item.Price, 0) đ</span></div>
-                                                    }
-                                                    else
-                                                    {
-                                                        <div class="product_price" style="color: #162938;">@WebsiteBanDTOnline.Common.Common.FormatNumber(item.Price, 0) đ</div>
-                                                    }
-                                                </div>
+                                            <div class="product_info">
+                                                <h6 class="product_name"><a href="/chi-tiet/@item.Alias-@(item.Id)">@item.ProductName</a></h6>
+                                                @if (item.PriceSale > 0)
+                                                {
+                                                    <div class="product_price" style="color: #162938;">@WebsiteBanDTOnline.Common.Common.FormatNumber(item.PriceSale, 0) đ<span>@WebsiteBanDTOnline.Common.Common.FormatNumber(item.Price, 0) đ</span></div>
+                                                    <div style="display:none;" class="in_product_price">@item.PriceSale</div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="product_price" style="color: #162938;">@WebsiteBanDTOnline.Common.Common.FormatNumber(item.Price, 0) đ</div>
+                                                    <div style="display:none;" class="in_product_price">@item.PriceSale</div>
+                                                }
+                                            </div>
                                             </div>
                                             <div class="blue_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@item.Id">Thêm vào giỏ hàng</a></div>
                                         </div>
@@ -268,11 +270,11 @@
     <script src="~/Content/assets/js/categories_custom.js"></script>
     <script src="~/Scripts/jsShopping.js"></script>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="styles/bootstrap4/popper.js"></script>
-    <script src="styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-    <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="plugins/easing/easing.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+    <script src="~/styles/bootstrap4/popper.js"></script>
+    <script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/plugins/easing/easing.js"></script>
+    <script src="~/Js/custom.js"></script>
 }
