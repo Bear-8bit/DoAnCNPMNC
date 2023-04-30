@@ -20,7 +20,7 @@ namespace WebsiteBanDTOnline.Controllers
         public ActionResult Authen(User user)
         {
             var check = db.Userxs.Where(x => x.Email.Equals(user.Email) && x.Password.Equals(user.Password)).FirstOrDefault();
-            if (check != null)
+            if (check == null)
             {
                     Session["Id"] = user.Id;
                     Session["Email"] = user.Email;
@@ -28,7 +28,17 @@ namespace WebsiteBanDTOnline.Controllers
             }
             else
             {
-                return View("Index", user);
+                var test = db.Userxs.FirstOrDefault(x => x.Email == user.Email);
+                if (test.Email != "admin@gmail.com")
+                {
+                    Session["Id"] = user.Id;
+                    Session["Email"] = user.Email;
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Admin/ThongKeDoanhThu");
+                } 
             }
         }
         [HttpGet]
