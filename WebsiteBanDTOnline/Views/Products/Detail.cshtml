@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Detail";
 }
-<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_styles.css?version=5">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_styles.css">
 <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_responsive.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -63,7 +63,8 @@
                 <div class="product_details">
                     <div class="product_details_title">
                         <h2>@Model.ProductName</h2>
-                        <p>@Html.Raw(Model.Description)</p>
+                        <h4>Chi tiết sản phẩm</h4>
+                        <p >@Html.Raw(Model.Description)</p>
                         @*<p>Lượt xem: <b>@Model.ViewCount</b></p>*@
                     </div>
                     @if (Model.PriceSale > 0)
@@ -248,7 +249,7 @@
                 <div class="row">
                     <div class="footer-col">
                         <h4>Thông tin và chính sách</h4>
-                        <ul>
+                        <ul  style=" list-style: none;">
                             <li><a href="#">Mua hàng và thanh toán Online</a></li>
                             <li><a href="#">Tra thông tin đơn hàng</a></li>
                             <li><a href="#">Xem ưu đãi thành vi</a></li>
@@ -259,7 +260,7 @@
 
                     <div class="footer-col">
                         <h4>Dịch vụ và thông tin khác</h4>
-                        <ul>
+                        <ul style=" list-style: none;">
                             <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
                             <li><a href="#">Ưu đãi thanh toán</a></li>
                             <li><a href="#">Quy chế hoạt động</a></li>
@@ -271,7 +272,7 @@
 
                     <div class="footer-col">
                         <h4>Chăm sóc khách hàng</h4>
-                        <ul>
+                        <ul style=" list-style: none;">
                             <li><a href="#">Trung tâm trợ giúp</a></li>
                             <li><a href="#">Hướng dẫn mua hàng</a></li>
                             <li><a href="#">Vận chuyển</a></li>
