@@ -29,7 +29,7 @@ namespace WebsiteBanDTOnline.Models.EF
         [StringLength(50)]
         public string ProductCode { get; set; }
         public string Description { get; set; }
-        [StringLength(500)]
+        [StringLength(10000)]
         public string Detail { get; set; }
         [StringLength(250)]
         public string Image { get; set; }

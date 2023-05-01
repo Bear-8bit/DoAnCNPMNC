@@ -256,6 +256,18 @@
     <Compile Include="Migrations\202304240502439_UpdateProductDetail.designer.cs">
       <DependentUpon>202304240502439_UpdateProductDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305010628537_UpdateLengthProduct.cs" />
+    <Compile Include="Migrations\202305010628537_UpdateLengthProduct.designer.cs">
+      <DependentUpon>202305010628537_UpdateLengthProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305010656237_UpdateLengthDetail.cs" />
+    <Compile Include="Migrations\202305010656237_UpdateLengthDetail.designer.cs">
+      <DependentUpon>202305010656237_UpdateLengthDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305010701202_UpdateLength.cs" />
+    <Compile Include="Migrations\202305010701202_UpdateLength.designer.cs">
+      <DependentUpon>202305010701202_UpdateLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -3659,6 +3671,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304240502439_UpdateProductDetail.resx">
       <DependentUpon>202304240502439_UpdateProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305010628537_UpdateLengthProduct.resx">
+      <DependentUpon>202305010628537_UpdateLengthProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305010656237_UpdateLengthDetail.resx">
+      <DependentUpon>202305010656237_UpdateLengthDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305010701202_UpdateLength.resx">
+      <DependentUpon>202305010701202_UpdateLength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

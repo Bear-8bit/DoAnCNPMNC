@@ -87,8 +87,12 @@
                                                     @Html.ValidationMessageFor(x => x.ProductCode, null, new { @class = "text-danger" })
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="exampleInputPassword1">Nổi bật</label>
+                                                    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @id = "txtDescription" })
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="exampleInputPassword1">Chi Tiết</label>
-                                                    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @id = "txtDetail" })
+                                                    @Html.TextAreaFor(x => x.Detail, new { @class = "form-control", @id = "txtDetail" })
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Danh mục</label>
@@ -99,7 +103,7 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail">Số Lượng</label>
-                                                            @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control"})
+                                                            @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
                                                             @Html.ValidationMessageFor(x => x.Quantity, null, new { @class = "text-danger" })
                                                         </div>
                                                     </div>
@@ -275,6 +279,16 @@
                 var demoGet = $('#demoOriginalPrice').autoNumeric('get');
                 $('#OriginalPrice').val(demoGet);
                 $('#+OriginalPrice').autoNumeric('set', demoGet);
+            });
+            var editor = CKEDITOR.replace('txtDescription', {
+                filebrowserBrowseUrl: '/Content/ckfinder/ckfinder.html',
+                filebrowserImageBrowseUrl: '/Content/ckfinder/ckfinder.html?type=Images',
+                filebrowserUploadUrl: '/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+                filebrowserImageUploadUrl: '/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images',
+                filebrowserWindowWidth: '1000',
+                filebrowserWindowHeight: '700',
+                customConfig: '/Content/ckeditor/config.js',
+                extraAllowedContent: 'span',
             });
             var editor = CKEDITOR.replace('txtDetail', {
                 filebrowserBrowseUrl: '/Content/ckfinder/ckfinder.html',
