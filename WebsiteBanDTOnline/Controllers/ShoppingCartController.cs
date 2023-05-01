@@ -64,7 +64,7 @@ namespace WebsiteBanDTOnline.Controllers
         [HttpPost]
         public ActionResult AddToCart(int id, int quantity)
         {
-            var code = new { Success = false, msg = "", code = -1, Count = 0 };
+            var code = new { Success = false, msg = "", code = -1, Count = 1 };
             var db = new ApplicationDbContext(); 
             var checkProduct = db.Products.FirstOrDefault (x => x.Id == id);
             if (checkProduct != null) 

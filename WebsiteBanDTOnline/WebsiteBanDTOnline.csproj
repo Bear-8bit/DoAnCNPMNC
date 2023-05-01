@@ -268,6 +268,10 @@
     <Compile Include="Migrations\202305010701202_UpdateLength.designer.cs">
       <DependentUpon>202305010701202_UpdateLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305010927135_UserReview.cs" />
+    <Compile Include="Migrations\202305010927135_UserReview.designer.cs">
+      <DependentUpon>202305010927135_UserReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -287,6 +291,7 @@
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\EF\ThongKe.cs" />
     <Compile Include="Models\EF\User.cs" />
+    <Compile Include="Models\EF\UserReviews.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
@@ -3576,6 +3581,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Login\" />
     <Folder Include="Areas\Admin\Views\SystemSettings\" />
+    <Folder Include="Areas\Admin\Views\TrendItem\" />
     <Folder Include="Content\ckfinder\userfiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -3680,6 +3686,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305010701202_UpdateLength.resx">
       <DependentUpon>202305010701202_UpdateLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305010927135_UserReview.resx">
+      <DependentUpon>202305010927135_UserReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

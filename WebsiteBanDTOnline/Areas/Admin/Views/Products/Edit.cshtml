@@ -61,11 +61,12 @@
                                     @Html.AntiForgeryToken()
                                     @Html.ValidationSummary(false)
                                     @Html.HiddenFor(x => x.Id)
+                                    @Html.HiddenFor(x => x.ViewCount)
                                     <div class="card-header p-2">
                                         <ul class="nav nav-pills">
                                             <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Thông tin chung</a></li>
                                             @*<li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Hình ảnh</a></li>*@
-                                            <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">SEO</a></li>
+                                            @* <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">SEO</a></li>*@
                                         </ul>
                                     </div><!-- /.card-header -->
                                     <div class="card-body">
@@ -187,7 +188,7 @@
                                             </div>
                                             <!-- /.tab-pane -->
 
-                                            <div class="tab-pane" id="settings">
+                                       @*    <div class="tab-pane" id="settings">
                                                 <form class="form-horizontal">
                                                     <div class="form-group row">
                                                         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
@@ -234,7 +235,7 @@
                                                         </div>
                                                     </div>
                                                 </form>
-                                            </div>
+                                            </div> *@ 
                                             <!-- /.tab-pane -->
                                         </div>
                                         <!-- /.tab-content -->

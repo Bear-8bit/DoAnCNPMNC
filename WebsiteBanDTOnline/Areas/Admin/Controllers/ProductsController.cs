@@ -135,6 +135,19 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
             return Json(new { success = false });
         }
         [HttpPost]
+        public ActionResult IsHot(int id)
+        {
+            var item = db.Products.Find(id);
+            if (item != null)
+            {
+                item.IsHot = !item.IsHot;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return Json(new { success = true, IsHot = item.IsHot    });
+            }
+            return Json(new { success = false });
+        }
+        [HttpPost]
         public ActionResult IsActive(int id)
         {
             var item = db.Products.Find(id);

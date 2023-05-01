@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Web;
+using System.Web.WebPages;
 
 namespace WebsiteBanDTOnline.Models.EF
 {
