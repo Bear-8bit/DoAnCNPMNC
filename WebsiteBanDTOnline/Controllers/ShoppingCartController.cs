@@ -80,7 +80,7 @@ namespace WebsiteBanDTOnline.Controllers
                     ProductName = checkProduct.ProductName,
                     CategoryName = checkProduct.ProductCate_ID,
                     Alias = checkProduct.Alias,
-                    Quantity = quantity
+                    Quantity = quantity + 1
                 };
                 if (checkProduct.ProductImages.FirstOrDefault(x => x.IsDefault) != null)
                 {
@@ -94,7 +94,7 @@ namespace WebsiteBanDTOnline.Controllers
                 item.TotalPrice = item.Quantity * item.Price;
                 cart.AddToCart(item, quantity);
                 Session["Cart"] = cart;
-                code = new { Success = true, msg = "Thêm sản phẩm thành công", code = 1,  Count = cart.Items.Count};
+                code = new { Success = true, msg = "Thêm sản phẩm thành công", code = 1,  Count = cart.Items.Count + 1};
             }
             return Json(code);
         }
