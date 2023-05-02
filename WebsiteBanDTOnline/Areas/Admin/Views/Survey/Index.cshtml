@@ -1,0 +1,139 @@
+﻿@model PagedList.IPagedList<WebsiteBanDTOnline.Models.EF.Survey>
+@using PagedList.Mvc;
+@using PagedList;
+@{
+    ViewBag.Title = "Danh sách Khảo sát";
+}
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+@section naviheader{
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+        </li>
+
+    </ul>
+}
+@section body{
+    <section class="content">
+        <div class="card-header">
+            <h3 class="card-title">Kết quả khảo sát</h3>
+
+
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tên khách hàng</th>
+                        <th>Email</th>
+                        <th style="text-align: center;">Trạng thái khuyến nghị</th>
+                        <th style="text-align: center;">Đánh giá</th>
+                        <th>Ngày tạo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1;
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@i</td>
+                                <td>@item.CustomerName</td>
+                                <td>@item.Email</td>
+                                @if (item.IsRecommended == true)
+                                {
+                                    <td style="text-align: center;">Khuyến nghị <i class="fa fa-thumbs-up" aria-hidden="true"></i></td>
+
+                                }
+                                else
+                                {
+                                    <td>   Không khuyến nghị  <i class="fa fa-thumbs-down" aria-hidden="true"></i></td>
+
+                                }
+                                @if (item.Is1Star == true)
+                                {
+                                    <td style="text-align: center;"> 1 <i class="fa fa-star" aria-hidden="true"></i></td>
+                                }
+                                else if (item.Is2Star == true)
+                                {
+                                    <td style="text-align: center;"> 2 <i class="fa fa-star" aria-hidden="true"></i></td>
+                                }
+                                else if (item.Is3Star == true)
+                                {
+                                    <td style="text-align: center;"> 3 <i class="fa fa-star" aria-hidden="true"></i></td>
+                                }
+                                else if (item.Is4Star == true)
+                                {
+                                    <td style="text-align: center;"> 4 <i class="fa fa-star" aria-hidden="true"></i></td>
+                                }
+                                else if (item.Is5Star == true)
+                                {
+                                    <td style="text-align: center;"> 5 <i class="fa fa-star" aria-hidden="true"></i></td>
+                                }
+                                <td>@item.CreatedDate.ToString()</td>
+                                <td>
+                                    <a href="@Url.Action("ViewSurvey", "Survey", new {@id = item.Id})" class="btn btn-sm btn-success">Xem</a>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    }
+                </tbody>
+
+            </table>
+
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6" style="text-align: right;">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+
+        </div>
+
+    </section>
+}
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(".btnClose").click(function () {
+                $("#modal-default").css("display", "none");
+            });
+
+            $(".btnCapNhat").click(function () {
+                $("#modal-default").css("display", "block");
+            });
+
+
+        });
+        $('body').on('click', '.btnLuu', function () {
+            var id = $('#txtOrderId').val();
+            var tt = $('#ddTrangThai').val();
+            $.ajax({
+                url: "/Admin/Survey/UpdateTT",
+                type: 'POST',
+                data: { id: id, TrangThai: tt },
+                success: function (res) {
+                    if (res.Success) {
+                        location.reload();
+                    }
+                }
+            });
+        });</script>
+}
+</html>
+

@@ -156,6 +156,8 @@
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PromotionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SurveyController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongKeDoanhThuController.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -272,6 +274,18 @@
     <Compile Include="Migrations\202305010927135_UserReview.designer.cs">
       <DependentUpon>202305010927135_UserReview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305020734226_TableSurvey.cs" />
+    <Compile Include="Migrations\202305020734226_TableSurvey.designer.cs">
+      <DependentUpon>202305020734226_TableSurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305020756141_CommentColumn.cs" />
+    <Compile Include="Migrations\202305020756141_CommentColumn.designer.cs">
+      <DependentUpon>202305020756141_CommentColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305020810096_UpdateSurvey.cs" />
+    <Compile Include="Migrations\202305020810096_UpdateSurvey.designer.cs">
+      <DependentUpon>202305020810096_UpdateSurvey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -288,6 +302,7 @@
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\EF\ProductImage.cs" />
     <Compile Include="Models\EF\Subcribe.cs" />
+    <Compile Include="Models\EF\Survey.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\EF\ThongKe.cs" />
     <Compile Include="Models\EF\User.cs" />
@@ -3507,6 +3522,9 @@
     <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\moment.min.js.map" />
     <Content Include="Areas\Admin\Views\ThongKeDoanhThu\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Promotion\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Survey\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Survey\ViewSurvey.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -3580,6 +3598,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Login\" />
+    <Folder Include="Areas\Admin\Views\Sủvey\" />
     <Folder Include="Areas\Admin\Views\SystemSettings\" />
     <Folder Include="Areas\Admin\Views\TrendItem\" />
     <Folder Include="Content\ckfinder\userfiles\" />
@@ -3689,6 +3708,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305010927135_UserReview.resx">
       <DependentUpon>202305010927135_UserReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305020734226_TableSurvey.resx">
+      <DependentUpon>202305020734226_TableSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305020756141_CommentColumn.resx">
+      <DependentUpon>202305020756141_CommentColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305020810096_UpdateSurvey.resx">
+      <DependentUpon>202305020810096_UpdateSurvey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

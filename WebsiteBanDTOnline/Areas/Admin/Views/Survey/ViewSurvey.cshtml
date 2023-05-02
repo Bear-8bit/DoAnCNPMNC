@@ -1,0 +1,100 @@
+﻿@model WebsiteBanDTOnline.Models.EF.Survey
+@using PagedList;
+@{
+    ViewBag.Title = "Chi tiết khảo sát";
+}
+@section naviheader{
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+        </li>
+
+    </ul>
+}
+@section body{
+    <section class="content">
+        <div class="card-header">
+            <h3 class="card-title">Chi tiết khảo sát</h3>
+
+
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Mã khảo sát</label>
+                    <p class="form-control">@Model.Id</p>
+                </div>
+                <div class="col-md-6">
+                    <label>Tên khách hàng</label>
+                    <p class="form-control">@Model.CustomerName</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Tuổi</label>
+                    <p class="form-control">@Model.Age</p>
+                </div>
+                <div class="col-md-6">
+                    <label>Email</label>
+                    <p class="form-control">@Model.Email</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Trạng thái</label>
+                    @if (Model.IsRecommended == true)
+                    {
+                        <p class="form-control">Khuyến nghị <i class="fa fa-thumbs-up" aria-hidden="true"></i></p>
+                    }
+                    else
+                    {
+                        <p class="form-control">  Không khuyến nghị  <i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
+                    }
+
+                </div>
+                <div class="col-md-6">
+                    <label>Đánh giá</label>
+                    @if (Model.Is1Star == true)
+                    {
+                        <p class="form-control"> 1 <i class="fa fa-star" aria-hidden="true"></i></p>
+                    }
+                    else if (Model.Is2Star == true)
+                    {
+                        <p class="form-control"> 2 <i class="fa fa-star" aria-hidden="true"></i></p>
+                    }
+                    else if (Model.Is3Star == true)
+                    {
+                        <p class="form-control"> 3 <i class="fa fa-star" aria-hidden="true"></i></p>
+                    }
+                    else if (Model.Is4Star == true)
+                    {
+                        <p class="form-control"> 4 <i class="fa fa-star" aria-hidden="true"></i></p>
+                    }
+                    else if (Model.Is5Star == true)
+                    {
+                        <p class="form-control"> 5 <i class="fa fa-star" aria-hidden="true"></i></p>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Nhận xét</label>
+                    <p class="form-control">@Model.Comment</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <a href="@Url.Action("Index","Survey")" class="btn btn-danger">Quay lại</a>
+            </div>
+        </div>
+        <div class="card-footer">
+
+        </div>
+    </section>
+}
+
+
+
+

@@ -38,6 +38,7 @@ namespace WebsiteBanDTOnline.Models
         public DbSet<Subcribe> Subcribes { get; set; }
         public DbSet<User> Userxs { get; set; }
         public DbSet<UserReviews> UserReview { get; set; }
+        public DbSet<Survey> Surveys { get; set; }
 
         public static ApplicationDbContext Create() 
         {
