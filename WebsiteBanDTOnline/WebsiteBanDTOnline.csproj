@@ -152,7 +152,6 @@
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
@@ -310,7 +309,6 @@
     <Compile Include="Models\EF\News.cs" />
     <Compile Include="Models\EF\Order.cs" />
     <Compile Include="Models\EF\OrderDetail.cs" />
-    <Compile Include="Models\EF\Posts.cs" />
     <Compile Include="Models\EF\Product.cs" />
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\EF\ProductImage.cs" />
@@ -3614,8 +3612,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Login\" />
-    <Folder Include="Areas\Admin\Views\Sủvey\" />
     <Folder Include="Areas\Admin\Views\SystemSettings\" />
     <Folder Include="Areas\Admin\Views\TrendItem\" />
     <Folder Include="Content\ckfinder\userfiles\" />

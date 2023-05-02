@@ -35,6 +35,5 @@ namespace WebsiteBanDTOnline.Models.EF
         public bool IsActive { get; set; }
 
         public ICollection<News> News { get; set; }
-        public ICollection<Posts> Posts { get; set;}
     }
 }
