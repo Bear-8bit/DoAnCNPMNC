@@ -27,6 +27,7 @@ namespace WebsiteBanDTOnline.Models
         public DbSet<ThongKe> ThongKes { get; set; }
         public DbSet<Adv> Advs { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<Promotions> Promotions { get; set; }
         public DbSet<SystemSetting> SystemSettings { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Product> Products { get; set; }

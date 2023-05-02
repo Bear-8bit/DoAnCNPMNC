@@ -298,6 +298,14 @@
     <Compile Include="Migrations\202305021039261_UpdateSurvey2.designer.cs">
       <DependentUpon>202305021039261_UpdateSurvey2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305021418317_RemovePosts.cs" />
+    <Compile Include="Migrations\202305021418317_RemovePosts.designer.cs">
+      <DependentUpon>202305021418317_RemovePosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305021422571_AddPromotion.cs" />
+    <Compile Include="Migrations\202305021422571_AddPromotion.designer.cs">
+      <DependentUpon>202305021422571_AddPromotion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -312,6 +320,7 @@
     <Compile Include="Models\EF\Product.cs" />
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\EF\ProductImage.cs" />
+    <Compile Include="Models\EF\Promotion.cs" />
     <Compile Include="Models\EF\Subcribe.cs" />
     <Compile Include="Models\EF\Survey.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
@@ -3471,9 +3480,6 @@
     <Content Include="Areas\Admin\Views\News\Index.cshtml" />
     <Content Include="Areas\Admin\Views\News\Add.cshtml" />
     <Content Include="Areas\Admin\Views\News\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Posts\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Posts\Add.cshtml" />
-    <Content Include="Areas\Admin\Views\Posts\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Add.cshtml" />
     <Content Include="Areas\Admin\Views\ProductCategory\Index.cshtml" />
@@ -3534,9 +3540,11 @@
     <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\moment.min.js.map" />
     <Content Include="Areas\Admin\Views\ThongKeDoanhThu\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Promotion\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Survey\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Survey\ViewSurvey.cshtml" />
+    <Content Include="Areas\Admin\Views\Promotion\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Promotion\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Promotion\Edit.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -3613,7 +3621,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\SystemSettings\" />
-    <Folder Include="Areas\Admin\Views\TrendItem\" />
     <Folder Include="Content\ckfinder\userfiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -3739,6 +3746,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305021039261_UpdateSurvey2.resx">
       <DependentUpon>202305021039261_UpdateSurvey2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305021418317_RemovePosts.resx">
+      <DependentUpon>202305021418317_RemovePosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305021422571_AddPromotion.resx">
+      <DependentUpon>202305021422571_AddPromotion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
