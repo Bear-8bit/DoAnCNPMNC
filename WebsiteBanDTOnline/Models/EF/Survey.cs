@@ -10,12 +10,13 @@ namespace WebsiteBanDTOnline.Models.EF
     [Table("tb_Survey")]
     public class Survey : CommonAbstract
     {
-        [Key, ForeignKey("User")]
+        [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required(ErrorMessage = "Tên khách hàng không được để trống")]
         public string CustomerName { get; set; }
-        [Required(ErrorMessage = "Số điện thoại không được để trống")]
+        public string Code { get; set; }
+        [Required(ErrorMessage = "Tuổi không được để trống")]
         public int Age { get; set; }
         public string Email { get; set; }
         public bool IsRecommended { get; set; }
@@ -27,6 +28,5 @@ namespace WebsiteBanDTOnline.Models.EF
         public bool Is4Star { get; set; }
         public bool Is5Star { get; set; }
         public bool IsActive { get; set; }
-        public virtual User User { get; set; }
     }
 }

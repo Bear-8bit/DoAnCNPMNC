@@ -31,19 +31,5 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
             var item = db.Surveys.Find(id);
             return View(item);
         }
-        [HttpPost]
-        public ActionResult UpdateTT(int id, int TrangThai)
-        {
-            var item = db.Orders.Find(id);
-            if (item != null)
-            {
-                db.Orders.Attach(item);
-                item.TypePayment = TrangThai;
-                db.Entry(item).Property(x => x.TypePayment).IsModified = true;
-                db.SaveChanges();
-                return Json(new { message = "Success", Success = true });
-            }
-            return Json(new { message = "Unsuccess", Success = false });
-        }
     }
 }

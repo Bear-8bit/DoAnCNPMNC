@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Khảo sát thành công";
+}
+
+<link rel="stylesheet" type="text/css" href="~/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/categories_responsive.css">
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                    <li><a href="@Url.Action("Index","Khảo sát")"><i class="fa fa-angle-right" aria-hidden="true"></i>Khảo sát</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Khảo sát thành công</a></li>
+                </ul>
+            </div>
+
+            <!-- Sidebar -->
+            <!-- Main Content -->
+
+            <div class="row">
+                <div class="col-md-12" id="load_data">
+                    <h2>Khảo sát thành công</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/assets/js/categories_custom.js"></script>
+    <script src="~/Scripts/jsShopping.js"></script>
+}
+
+
+

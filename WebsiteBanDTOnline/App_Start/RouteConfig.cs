@@ -67,6 +67,12 @@ namespace WebsiteBanDTOnline
                namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
            );
             routes.MapRoute(
+              name: "Survey",
+              url: "khảo-sát",
+              defaults: new { controller = "Survey", action = "Index", alias = UrlParameter.Optional },
+              namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
+          );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },

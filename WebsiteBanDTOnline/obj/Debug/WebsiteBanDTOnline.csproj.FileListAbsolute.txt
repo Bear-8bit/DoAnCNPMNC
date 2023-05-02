@@ -336,6 +336,9 @@ C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.TableSurvey.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.CommentColumn.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateSurvey.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.AddCodeSurvey.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateSurvey1.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateSurvey2.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.GenerateResource.cache
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.CoreCompileInputs.cache
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.CopyComplete
