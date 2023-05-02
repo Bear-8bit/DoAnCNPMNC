@@ -63,7 +63,7 @@ namespace WebsiteBanDTOnline
             routes.MapRoute(
                name: "DetailNew",
                url: "khuyén-mãi",
-               defaults: new { controller = "New", action = "Index", alias = UrlParameter.Optional },
+               defaults: new { controller = "Promotion", action = "Index", alias = UrlParameter.Optional },
                namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
            );
             routes.MapRoute(

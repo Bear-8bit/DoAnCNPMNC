@@ -165,6 +165,7 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\PromotionController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Global.asax.cs">
@@ -3616,6 +3617,7 @@
     <Content Include="Views\Survey\Index.cshtml" />
     <Content Include="Views\Survey\SurveySuccess.cshtml" />
     <Content Include="Views\Survey\Partial_Survey.cshtml" />
+    <Content Include="Views\Promotion\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
