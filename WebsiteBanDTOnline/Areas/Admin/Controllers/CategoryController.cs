@@ -69,10 +69,10 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Delete(int id)
         {
-            var item = db.News.Find(id);
+            var item = db.Categories.Find(id);
             if(item != null)
             {
-                db.News.Remove(item); 
+                db.Categories.Remove(item); 
                 db.SaveChanges();
                 return Json(new { success = true });
             }
