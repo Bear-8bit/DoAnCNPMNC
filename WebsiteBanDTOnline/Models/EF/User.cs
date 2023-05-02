@@ -8,7 +8,7 @@ using System.Web;
 namespace WebsiteBanDTOnline.Models.EF
 {
     [Table("tb_Usexr")]
-    public class User
+    public class User : CommonAbstract
     {
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
@@ -19,6 +19,5 @@ namespace WebsiteBanDTOnline.Models.EF
         public string Email { get; set; }
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        public virtual Survey Survey { get; set; }
     }
 }

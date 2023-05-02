@@ -158,6 +158,7 @@
     <Compile Include="Areas\Admin\Controllers\PromotionController.cs" />
     <Compile Include="Areas\Admin\Controllers\SurveyController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongKeDoanhThuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -306,6 +307,14 @@
     <Compile Include="Migrations\202305021422571_AddPromotion.cs" />
     <Compile Include="Migrations\202305021422571_AddPromotion.designer.cs">
       <DependentUpon>202305021422571_AddPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305021601327_RemoveSurveyUserID.cs" />
+    <Compile Include="Migrations\202305021601327_RemoveSurveyUserID.designer.cs">
+      <DependentUpon>202305021601327_RemoveSurveyUserID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305021608514_UpdateUser1.cs" />
+    <Compile Include="Migrations\202305021608514_UpdateUser1.designer.cs">
+      <DependentUpon>202305021608514_UpdateUser1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -3546,6 +3555,7 @@
     <Content Include="Areas\Admin\Views\Promotion\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Promotion\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Promotion\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -3754,6 +3764,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305021422571_AddPromotion.resx">
       <DependentUpon>202305021422571_AddPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305021601327_RemoveSurveyUserID.resx">
+      <DependentUpon>202305021601327_RemoveSurveyUserID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305021608514_UpdateUser1.resx">
+      <DependentUpon>202305021608514_UpdateUser1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
