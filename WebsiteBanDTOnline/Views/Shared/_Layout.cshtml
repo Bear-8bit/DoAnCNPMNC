@@ -17,6 +17,55 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jqueryval")
 </head>
+<style>
+    .dropbtn {
+        background-color: #162938;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+        /* Dropdown button on hover & focus */
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #162938;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 10px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+            /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+       color: #162938;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+        display: block;
+    }
+</style>
 <body>
 
     <div class="super_container">
@@ -37,27 +86,35 @@
                             </div>
                             <nav class="navbar">
                                 @Html.Action("MenuTop", "Menu")
+                                @if (Session["Email"] == null)
+                                {
+                                    <ul class="navbar_menu">
+                                        <li><a href="@Url.Action("Index","Login")">Đăng nhập</a></li>
+                                    </ul>
+                                }
+
                                 <ul class="navbar_user">
                                     <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                    <li><a href="@Url.Action("Index","Login")"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+
                                     <li class="checkout">
                                         <a href="/gio-hang">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                             <span id="checkout_items" class="checkout_items">0</span>
                                         </a>
                                     </li>
-                                    <li style="color: #fff;">
-                                        @if (@Session["Email"] != null)
-                                        {
-                                            @Session["Email"].ToString();
-                                            <a href="@Url.Action("LogOut","Login")">Đăng xuất</a>
-                                        }
-                                        else
-                                        {
 
-                                        }
-                                    </li>
                                 </ul>
+                                @if (Session["Email"] != null)
+                                {
+                                    <div class="dropdown" style="margin-left: 10px;">
+                                        <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user" aria-hidden="true" style="color: #fff;"></i></button>
+                                        <div id="myDropdown" class="dropdown-content" style="text-align: center;">
+                                            <a href="#">@Session["Email"].ToString()</a>
+                                            <a href="/khảo-sát"><i class="fa fa-pencil-square-o" aria-hidden="true"  style="padding-right: 10px;"></i>Khảo sát</a>
+                                            <a href="@Url.Action("LogOut","Login")" aria-hidden="true" class="dropdown-item"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 10px;"></i>Đăng xuất</a>
+                                        </div>
+                                    </div>
+                                }
                                 <div class="hamburger_container">
                                     <i class="fa fa-bars" aria-hidden="true"></i>
                                 </div>
@@ -84,6 +141,25 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Js/jsShopping.js"></script>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
     @*Scripts.Render("~/bundles/jquery")*@
     @*Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
