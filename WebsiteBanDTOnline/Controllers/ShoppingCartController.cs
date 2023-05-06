@@ -157,7 +157,7 @@ namespace WebsiteBanDTOnline.Controllers
                         Price = x.Price,
                     }));
                     order.TotalAmount = cart.Items.Sum(x => (x.Price * x.Quantity));
-                    order.Quantity = req.Quantity;
+                    order.Quantity = cart.Items.Sum(x => (1 * x.Quantity));
                     order.TypePayment = req.TypePayment;
                     order.CreatedDate = DateTime.Now;
                     order.ModifiedDate = DateTime.Now.ToString();
