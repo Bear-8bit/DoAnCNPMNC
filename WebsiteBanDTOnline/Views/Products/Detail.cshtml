@@ -2,6 +2,13 @@
 @{
     ViewBag.Title = "Detail";
 }
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/bootstrap4/bootstrap.min.css">
+<link href="~/Content/assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_styles.css">
 <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_responsive.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -64,17 +71,17 @@
                     <div class="product_details_title">
                         <h2>@Model.ProductName</h2>
                         <h4>Đặc điểm nổi bật</h4>
-                        <p >@Html.Raw(Model.Description)</p>
+                        <p>@Html.Raw(Model.Description)</p>
                         @*<p>Lượt xem: <b>@Model.ViewCount</b></p>*@
                     </div>
                     @if (Model.PriceSale > 0)
                     {
                         <div class="original_price" style="color: #162938">@WebsiteBanDTOnline.Common.Common.FormatNumber(Model.Price, 0) đ</div>
-                        <div class="product_price"  style="color: #162938">@WebsiteBanDTOnline.Common.Common.FormatNumber(Model.PriceSale, 0) đ</div>
+                        <div class="product_price" style="color: #162938">@WebsiteBanDTOnline.Common.Common.FormatNumber(Model.PriceSale, 0) đ</div>
                     }
                     else
                     {
-                        <div class="product_price"  style="color: #162938">@WebsiteBanDTOnline.Common.Common.FormatNumber(Model.Price, 0) đ</div>
+                        <div class="product_price" style="color: #162938">@WebsiteBanDTOnline.Common.Common.FormatNumber(Model.Price, 0) đ</div>
                     }
                     <ul class="star_rating">
                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -92,7 +99,7 @@
                             <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
                         </div>
                         <div class="blue_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@Model.Id">Thêm vào giỏ hàng</a></div>
-                        <div class="product_favorite d-flex flex-column align-items-center justify-content-center"></div>
+                        <div class="product_favorite d-flex flex-column align-items-center justify-content-center"><a href="#" onClick='addToWishList(' @Model.Id ')'><i class="far fa-heart"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -117,174 +124,202 @@
                 <div class="col">
 
                     <!-- Tab Description -->
-                       <div id="tab_1" class="tab_container active">
-                              <div class="row">
-                                    <div class="col-lg-10 desc_col">
-                                        <div class="tab_title">
-                                            <h4>Chi tiết sản phẩm</h4>
-                                        </div>
-                                        <div class="tab_text_block">
-                                            @Html.Raw(Model.Detail)
-                                        </div>
-                                        <div class="tab_image">
-                                          
-                                        </div>
-
-                                    </div>
-                          
+                    <div id="tab_1" class="tab_container active">
+                        <div class="row">
+                            <div class="col-lg-10 desc_col">
+                                <div class="tab_title">
+                                    <h4>Chi tiết sản phẩm</h4>
                                 </div>
-                            </div>
-
-                            <!-- Tab Additional Info -->
-                            <!-- Tab Reviews -->
-
-                            <div id="tab_3" class="tab_container">
-                                <div class="row">
-
-                                    <!-- User Reviews -->
-
-                                 <div class="col-lg-6 reviews_col">
-                                        <div class="tab_title reviews_title">
-                                            <h4>Reviews (2)</h4>
-                                        </div>
-
-                                        <!-- User Review -->
-
-                                        <div class="user_review_container d-flex flex-column flex-sm-row">
-                                            <div class="user">
-                                                <div class="user_pic"></div>
-                                                <div class="user_rating">
-                                                    <ul class="star_rating">
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="review">
-                                                <div class="review_date">27 Aug 2016</div>
-                                                <div class="user_name">Brandon William</div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- User Review -->
-
-                                        <div class="user_review_container d-flex flex-column flex-sm-row">
-                                            <div class="user">
-                                                <div class="user_pic"></div>
-                                                <div class="user_rating">
-                                                    <ul class="star_rating">
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="review">
-                                                <div class="review_date">27 Aug 2016</div>
-                                                <div class="user_name">Brandon William</div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                    </div> 
-
-                                    <!-- Add Review -->
-
-                                    <div class="col-lg-6 add_review_col">
-
-                                        <div class="add_review">
-                                            <form id="review_form" action="post">
-                                                <div>
-                                                    <h1>Add Review</h1>
-                                                    <input id="review_name" class="form_input input_name" type="text" name="name" placeholder="Name*" required="required" data-error="Name is required.">
-                                                    <input id="review_email" class="form_input input_email" type="email" name="email" placeholder="Email*" required="required" data-error="Valid email is required.">
-                                                </div>
-                                                <div>
-                                                    <h1>Your Rating:</h1>
-                                                    <ul class="user_star_rating">
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                    </ul>
-                                                    <textarea id="review_message" class="input_review" name="message" placeholder="Your Review" rows="4" required data-error="Please, leave us a review."></textarea>
-                                                </div>
-                                                <div class="text-left text-sm-right">
-                                                    <button id="review_submit" type="submit" class="red_button review_submit_btn trans_300" value="Submit">submit</button>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
+                                <div class="tab_text_block">
+                                    @Html.Raw(Model.Detail)
+                                </div>
+                                <div class="tab_image">
 
                                 </div>
+
                             </div>
 
                         </div>
                     </div>
-                </div>
 
-            </div>
-        }
-        <!-- Footer -->
+                    <!-- Tab Additional Info -->
+                    <!-- Tab Reviews -->
 
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>Thông tin và chính sách</h4>
-                        <ul  style=" list-style: none;">
-                            <li><a href="#">Mua hàng và thanh toán Online</a></li>
-                            <li><a href="#">Tra thông tin đơn hàng</a></li>
-                            <li><a href="#">Xem ưu đãi thành vi</a></li>
-                            <li><a href="#">Tra thông tin bảo hành</a></li>
-                            <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
-                        </ul>
-                    </div>
+                    <div id="tab_3" class="tab_container">
+                        <div class="row">
 
-                    <div class="footer-col">
-                        <h4>Dịch vụ và thông tin khác</h4>
-                        <ul style=" list-style: none;">
-                            <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
-                            <li><a href="#">Ưu đãi thanh toán</a></li>
-                            <li><a href="#">Quy chế hoạt động</a></li>
-                            <li><a href="#">Chính sách bảo hành</a></li>
-                            <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
-                            <li><a href="#">Tuyển dụng</a></li>
-                        </ul>
-                    </div>
+                            <!-- User Reviews -->
 
-                    <div class="footer-col">
-                        <h4>Chăm sóc khách hàng</h4>
-                        <ul style=" list-style: none;">
-                            <li><a href="#">Trung tâm trợ giúp</a></li>
-                            <li><a href="#">Hướng dẫn mua hàng</a></li>
-                            <li><a href="#">Vận chuyển</a></li>
-                            <li><a href="#">Trả hàng và hoàn tiền</a></li>
-                            <li><a href="#">Chăm sóc khách hàng</a></li>
-                            <li><a href="#">Thanh toán</a></li>
-                        </ul>
-                    </div>
+                            <div class="col-lg-6 reviews_col">
+                                <div class="tab_title reviews_title">
+                                    <h4>Reviews (2)</h4>
+                                </div>
 
-                    <div class="footer-col">
-                        <h4>Theo dõi chúng tôi</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="ri-facebook-circle-line"></i></a>
-                            <a href="#"><i class="ri-instagram-line"></i></a>
-                            <a href="#"><i class="ri-youtube-line"></i></a>
-                            <a href="#"><i class="ri-steam-fill"></i></a>
+                                <!-- User Review -->
+
+                                <div class="user_review_container d-flex flex-column flex-sm-row">
+                                    <div class="user">
+                                        <div class="user_pic"></div>
+                                        <div class="user_rating">
+                                            <ul class="star_rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="review">
+                                        <div class="review_date">27 Aug 2016</div>
+                                        <div class="user_name">Brandon William</div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                </div>
+
+                                <!-- User Review -->
+
+                                <div class="user_review_container d-flex flex-column flex-sm-row">
+                                    <div class="user">
+                                        <div class="user_pic"></div>
+                                        <div class="user_rating">
+                                            <ul class="star_rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="review">
+                                        <div class="review_date">27 Aug 2016</div>
+                                        <div class="user_name">Brandon William</div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add Review -->
+
+                            <div class="col-lg-6 add_review_col">
+
+                                <div class="add_review">
+                                    <form id="review_form" action="post">
+                                        <div>
+                                            <h1>Add Review</h1>
+                                            <input id="review_name" class="form_input input_name" type="text" name="name" placeholder="Name*" required="required" data-error="Name is required.">
+                                            <input id="review_email" class="form_input input_email" type="email" name="email" placeholder="Email*" required="required" data-error="Valid email is required.">
+                                        </div>
+                                        <div>
+                                            <h1>Your Rating:</h1>
+                                            <ul class="user_star_rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <textarea id="review_message" class="input_review" name="message" placeholder="Your Review" rows="4" required data-error="Please, leave us a review."></textarea>
+                                        </div>
+                                        <div class="text-left text-sm-right">
+                                            <button id="review_submit" type="submit" class="red_button review_submit_btn trans_300" value="Submit">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
 
                 </div>
             </div>
-        </footer>
-        @section scripts{
-            <script src="~/Content/assets/js/single_custom.js"></script>
-        }
+        </div>
+
+    </div>
+}
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Thông tin và chính sách</h4>
+                <ul style=" list-style: none;">
+                    <li><a href="#">Mua hàng và thanh toán Online</a></li>
+                    <li><a href="#">Tra thông tin đơn hàng</a></li>
+                    <li><a href="#">Xem ưu đãi thành vi</a></li>
+                    <li><a href="#">Tra thông tin bảo hành</a></li>
+                    <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dịch vụ và thông tin khác</h4>
+                <ul style=" list-style: none;">
+                    <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
+                    <li><a href="#">Ưu đãi thanh toán</a></li>
+                    <li><a href="#">Quy chế hoạt động</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Chăm sóc khách hàng</h4>
+                <ul style=" list-style: none;">
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                    <li><a href="#">Trả hàng và hoàn tiền</a></li>
+                    <li><a href="#">Chăm sóc khách hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                    <a href="#"><i class="ri-steam-fill"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+@section scripts{
+    <script src="~/Content/assets/js/single_custom.js"></script>
+    <script>
+
+    function addToWishList(id)
+    {
+        var json = {
+            id : id
+    };
+
+        $.ajax({
+        type: 'POST',
+        url: "@Url.Action("AddToWishList", "Products")",
+        dataType : "json",
+        data: {"json": JSON.stringify(json)},
+        success: function(data) {
+            if(data.status=="true")
+            {
+                alert(data.msg);
+                var urlToRedirect= '@Url.Action("Index","Home")';
+                window.location.href = urlToRedirect; //Redirect here
+            }
+            },
+            error: function(data) {
+                alert('Some error');
+                window.location.reload();
+            }
+        });
+    }
+    </script>
+}

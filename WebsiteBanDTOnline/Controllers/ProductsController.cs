@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using WebsiteBanDTOnline.Models;
 
 namespace WebsiteBanDTOnline.Controllers
@@ -58,5 +59,6 @@ namespace WebsiteBanDTOnline.Controllers
             var items = db.Products.Where(x => x.IsHome && x.IsActive).Take(12).ToList();
             return PartialView(items);
         }
+  
     }
 }
