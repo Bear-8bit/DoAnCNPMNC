@@ -45,13 +45,13 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
             var result = query.GroupBy(x => DbFunctions.TruncateTime(x.CreateDate)).Select(x => new
             {
                 Date = x.Key.Value,
-                TotalBuy = x.Sum(y => y.Quantity * y.OriginalPrice),
-                TotalSell = x.Sum(y => y.Quantity * y.Price),
+                TotalBuy = x.Sum(y => y.Quantity * y.Price),
+                TotalSell = x.Sum(y => y.Quantity * y.OriginalPrice),
             }).Select(x => new
             {
                 Date = x.Date,
-                DoanhThu = x.TotalSell,
-                LoiNhuan = x.TotalSell - x.TotalBuy
+                DoanhThu = x.TotalBuy,
+                LoiNhuan =  x.TotalSell,
             });
             return Json(new { Data = result }, JsonRequestBehavior.AllowGet);
         }

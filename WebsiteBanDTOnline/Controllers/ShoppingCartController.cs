@@ -148,6 +148,7 @@ namespace WebsiteBanDTOnline.Controllers
                     Order order = new Order();
                     order.CustomerName = req.CustomerName;
                     order.Phone = req.Phone;
+                    order.Email = req.Email;
                     order.Address = req.Address;
                     cart.Items.ForEach(x => order.OrderDetails.Add(new OrderDetail
                     {
@@ -156,6 +157,7 @@ namespace WebsiteBanDTOnline.Controllers
                         Price = x.Price,
                     }));
                     order.TotalAmount = cart.Items.Sum(x => (x.Price * x.Quantity));
+                    order.Quantity = req.Quantity;
                     order.TypePayment = req.TypePayment;
                     order.CreatedDate = DateTime.Now;
                     order.ModifiedDate = DateTime.Now.ToString();
