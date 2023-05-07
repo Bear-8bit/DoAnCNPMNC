@@ -19,5 +19,6 @@ namespace WebsiteBanDTOnline.Models.EF
         public string Email { get; set; }
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        public virtual ICollection<UserReviews> UserReviews { get; set; }
     }
 }

@@ -154,6 +154,7 @@
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductImageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductReviewController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\PromotionController.cs" />
     <Compile Include="Areas\Admin\Controllers\SurveyController.cs" />
@@ -316,6 +317,14 @@
     <Compile Include="Migrations\202305021608514_UpdateUser1.cs" />
     <Compile Include="Migrations\202305021608514_UpdateUser1.designer.cs">
       <DependentUpon>202305021608514_UpdateUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305070730358_ModelReview.cs" />
+    <Compile Include="Migrations\202305070730358_ModelReview.designer.cs">
+      <DependentUpon>202305070730358_ModelReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305070811598_RemoveUserProductRElation.cs" />
+    <Compile Include="Migrations\202305070811598_RemoveUserProductRElation.designer.cs">
+      <DependentUpon>202305070811598_RemoveUserProductRElation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -3559,6 +3568,7 @@
     <Content Include="Areas\Admin\Views\Promotion\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Promotion\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductReview\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -3774,6 +3784,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305021608514_UpdateUser1.resx">
       <DependentUpon>202305021608514_UpdateUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305070730358_ModelReview.resx">
+      <DependentUpon>202305070730358_ModelReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305070811598_RemoveUserProductRElation.resx">
+      <DependentUpon>202305070811598_RemoveUserProductRElation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

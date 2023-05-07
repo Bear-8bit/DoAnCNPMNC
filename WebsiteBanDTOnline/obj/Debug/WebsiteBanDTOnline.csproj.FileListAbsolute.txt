@@ -348,3 +348,5 @@ C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.AddPromotion.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RemoveSurveyUserID.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateUser1.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.ModelReview.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RemoveUserProductRElation.resources
