@@ -3606,7 +3606,6 @@
     <Content Include="Views\Products\Partical_ItemByCateId.cshtml" />
     <Content Include="Views\Products\Partical_ProductSales.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Menu\_MenuLeft.cshtml" />
     <Content Include="Views\Products\ProductCategory.cshtml" />
     <Content Include="Views\Products\Detail.cshtml" />

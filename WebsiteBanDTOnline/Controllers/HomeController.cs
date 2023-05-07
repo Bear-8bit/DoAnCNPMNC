@@ -29,22 +29,19 @@ namespace WebsiteBanDTOnline.Controllers
 
             return View();
         }
-        [HttpPost]
         public ActionResult Partial_Subcribe()
         {
             return PartialView();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Subscribe(Subcribe req)
         {
             if(ModelState.IsValid)
             {
                 db.Subcribes.Add(new Subcribe { Email = req.Email, CreatedDate = DateTime.Now });
                 db.SaveChanges();
-                return Json(true);
             }
-            return View("Partial_Subcribe");
+            return View("Index", req);
         }
         public ActionResult Refresh() 
         {

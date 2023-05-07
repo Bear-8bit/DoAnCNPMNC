@@ -11,73 +11,73 @@
 <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="~/styles/main_styles.css"/>
+<link rel="stylesheet" type="text/css" href="~/styles/main_styles.css?verion=5" />
 <link rel="stylesheet" type="text/css" href="~/styles/responsive.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 <!-- Slider -->
-
-<div class="main_slider">
-    <div style="display: block">
-        <div class="block-top-home is-flex">
-            <div class="block-top-home__sliding-banner">
-                <div class="block-sliding-home">
-                    <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="1">
-                                <img src="~/Uploads/images/Banner/slider-1.jpg" />
+<div class="super_container">
+    <div class="main_slider">
+        <div style="display: block">
+            <div class="block-top-home is-flex">
+                <div class="block-top-home__sliding-banner">
+                    <div class="block-sliding-home">
+                        <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="1">
+                                    <img src="~/Uploads/images/Banner/slider-1.jpg" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="2">
+                                    <img src="~/Uploads/images/Banner/slider-2.jpg" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="3">
+                                    <img src="~/Uploads/images/Banner/slider-7.jpg" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="4">
+                                    <img src="~/Uploads/images/Banner/slidesr-4.jpg" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="5">
+                                    <img src="~/Uploads/images/Banner/slider-6.png" />
+                                </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="2">
-                                <img src="~/Uploads/images/Banner/slider-2.jpg" />
-                            </div>
-                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="3">
-                                <img src="~/Uploads/images/Banner/slider-7.jpg" />
-                            </div>
-                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="4">
-                                <img src="~/Uploads/images/Banner/slidesr-4.jpg" />
-                            </div>
-                            <div class="swiper-slide swiper-slide-dulicate" data-swiper-slide-index="5">
-                                <img src="~/Uploads/images/Banner/slider-6.png" />
-                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="block-top-home__right-banner">
+                    <div class="right-banner">
+                        <a class="right-banner__item">
+                            <img src="~/Uploads/images/Banner/banner1.jpg" class="right-banner__img" style="width: 700px; height: 120px;" />
+                        </a>
+                        <a class="right-banner__item">
+                            <img src="~/Uploads/images/Banner/banner2.jpg" class="right-banner__img " />
+                        </a>
+                        <a class="right-banner__item">
+                            <img src="~/Uploads/images/Banner/banner3.jpg" class="right-banner__img" style="width: 700px; height: 120px;" />
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="block-top-home__right-banner">
-                <div class="right-banner">
-                    <a class="right-banner__item">
-                        <img src="~/Uploads/images/Banner/banner1.jpg" class="right-banner__img" style="width: 700px; height: 120px;" />
-                    </a>
-                    <a class="right-banner__item">
-                        <img src="~/Uploads/images/Banner/banner2.jpg" class="right-banner__img " />
-                    </a>
-                    <a class="right-banner__item">
-                        <img src="~/Uploads/images/Banner/banner3.jpg" class="right-banner__img" style="width: 700px; height: 120px;" />
-                    </a>
-                </div>
-            </div>
+            <div class="horizontal-banner"></div>
         </div>
-        <div class="horizontal-banner"></div>
     </div>
-</div>
-<!-- Banner -->
-@Html.Action("MenuProductCategory", "Menu")
-<!-- New Arrivals -->
+    <!-- Banner -->
+    @Html.Action("MenuProductCategory", "Menu")
+    <!-- New Arrivals -->
 
-<div class="new_arrivals">
-    <div class="container">
-        @Html.Action("MenuArrivals", "Menu")
+    <div class="new_arrivals">
+        <div class="container">
+            @Html.Action("MenuArrivals", "Menu")
+        </div>
     </div>
-</div>
 
-<!-- Deal of the week -->
+    <!-- Deal of the week -->
 
-<div class="deal_ofthe_week">
-    <div class="container"/>
+    <div class="deal_ofthe_week">
+        <div class="container" />
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="deal_ofthe_week_img">
@@ -115,18 +115,15 @@
 </div>
 
 <!-- Best Sellers -->
-
 <!-- Benefit -->
-
-
 <!-- Blogs -->
 @Html.Action("Partial_New_Home", "New")
 
 <!-- Newsletter -->
-
+@Html.Action("Partial_Subcribe", "Home")
 <!-- Footer -->
 
-<footer class="footer" style="position: static; margin-top: 50px;">
+<footer class="footer" style="position: static;">
     <div class="footer-container">
         <div class="row">
             <div class="footer-col">
@@ -177,11 +174,13 @@
         </div>
     </div>
 </footer>
+
 <script src="~/js/jquery-3.2.1.min.js"></script>
 <script src="~/styles/bootstrap4/popper.js"></script>
 <script src="~/styles/bootstrap4/bootstrap.min.js"></script>
 <script src="~/plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="~/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 <script src="~/plugins/easing/easing.js"></script>
 <script src="~/Js/custom.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/responsive.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="~/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/categories_styles.css?version=1">
 <link rel="stylesheet" type="text/css" href="~/styles/categories_responsive.css">
 <div class="container product_section_container">
     <div class="row">
@@ -204,9 +204,31 @@
         </div>
     </div>
 </div>
+<!-- Newsletter -->
+<div class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
+                    <h4>Đăng ký nhận thư điện tử</h4>
+                    <p>Đăng ký ngay để nhận thông tin ưu đãi mới nhất</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form action="post">
+                    <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
+                        <input id="newsletter_email" type="email" placeholder="Email của bạn" required="required" data-error="">
+                        <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Footer -->
 
-<footer class="footer" style="position: static; margin-top: 50px;">
+<footer class="footer" style="position: static;">
     <div class="footer-container">
         <div class="row">
             <div class="footer-col">
