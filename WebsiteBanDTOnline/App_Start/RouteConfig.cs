@@ -30,7 +30,13 @@ namespace WebsiteBanDTOnline
               defaults: new { controller = "ShoppingCart", action = "Index", alias = UrlParameter.Optional },
               namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
             );
-             routes.MapRoute(
+            routes.MapRoute(
+             name: "WishList",
+             url: "danh-sach-uoc",
+             defaults: new { controller = "WishList", action = "Index", alias = UrlParameter.Optional },
+             namespaces: new[] { "WebsiteBanDTOnline.Controllers" }
+           );
+            routes.MapRoute(
                 name: "CategoryProduct",
                 url: "danh-muc-san-pham/{alias}-{id}",
                 defaults: new { controller = "Products", action = "Index", id = UrlParameter.Optional },

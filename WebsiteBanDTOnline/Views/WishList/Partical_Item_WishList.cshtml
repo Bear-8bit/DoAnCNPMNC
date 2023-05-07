@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebsiteBanDTOnline.Models.WishlistItem>
+@using WebsiteBanDTOnline.Common
+<table class="table">
+    <tr class="text-center">
+
+        <th>STT</th>
+        <th>Ảnh sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Danh mục sản phẩm</th>
+        <th>Giá </th>
+        <th style="width: 200px;">
+
+        </th>
+    </tr>
+    @if (Model != null && Model.Any())
+    {
+        var i = 0;
+        foreach (var item in Model)
+        {
+
+            <tr class="text-center" id="trow_@item.ProductId">
+                <td>@(i+1)</td>
+                <td><img src="@item.ProductImg" style="width: 60px;" /></td>
+                <td><a href="/chi-tiet/@item.Alias-@(item.ProductId) " style="color: #162938;">@item.ProductName</a></td>
+                <td>@item.CategoryName</td>
+                <td>@Common.FormatNumber(item.Price, 0)</td>
+                <td>
+                    <a href="#" data-id="@item.ProductId" class="btn btn-sm btn-danger btnDeleteList">Xóa</a>
+                </td>
+            </tr>
+            i++;
+
+        }
+        <tr>
+            <td>
+                <a href="#" class="btn btn-danger btnDeleteAllList">Xóa</a>
+            </td>
+        </tr>
+
+
+    }
+
+    else
+    {
+        <tr>
+            <th colspan="7">Không có sản phẩm trong danh sách ước</th>
+        </tr>
+    }
+</table>

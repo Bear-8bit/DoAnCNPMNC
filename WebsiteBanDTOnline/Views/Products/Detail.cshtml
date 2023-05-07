@@ -99,7 +99,7 @@
                             <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
                         </div>
                         <div class="blue_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@Model.Id">Thêm vào giỏ hàng</a></div>
-                        <div class="product_favorite d-flex flex-column align-items-center justify-content-center"><a href="#" onClick='addToWishList(' @Model.Id ')'><i class="far fa-heart"></i></a></div>
+                        <div class="product_favorite d-flex flex-column align-items-center justify-content-center btnAddToWishList" data-id="@Model.Id"></div>
                     </div>
                 </div>
             </div>
@@ -294,32 +294,5 @@
 </footer>
 @section scripts{
     <script src="~/Content/assets/js/single_custom.js"></script>
-    <script>
-
-    function addToWishList(id)
-    {
-        var json = {
-            id : id
-    };
-
-        $.ajax({
-        type: 'POST',
-        url: "@Url.Action("AddToWishList", "Products")",
-        dataType : "json",
-        data: {"json": JSON.stringify(json)},
-        success: function(data) {
-            if(data.status=="true")
-            {
-                alert(data.msg);
-                var urlToRedirect= '@Url.Action("Index","Home")';
-                window.location.href = urlToRedirect; //Redirect here
-            }
-            },
-            error: function(data) {
-                alert('Some error');
-                window.location.reload();
-            }
-        });
-    }
-    </script>
+    <script src="~/Js/jsWishList.js"></script>
 }

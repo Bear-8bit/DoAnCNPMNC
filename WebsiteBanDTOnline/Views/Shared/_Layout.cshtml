@@ -110,7 +110,7 @@
                                         <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user" aria-hidden="true" style="color: #fff;"></i></button>
                                         <div id="myDropdown" class="dropdown-content" style="text-align: center;">
                                             <a href="#">@Session["Email"].ToString()</a>
-                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true" style="padding-right: 10px;"></i>Danh sách ước</a>
+                                            <a href="/danh-sach-uoc"><i class="fa fa-heart-o" aria-hidden="true" style="padding-right: 10px;"></i>Danh sách ước</a>
                                             <a href="/khảo-sát"><i class="fa fa-pencil-square-o" aria-hidden="true" style="padding-right: 10px;"></i>Khảo sát</a>
                                             <a href="@Url.Action("LogOut","Login")" aria-hidden="true" class="dropdown-item"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 10px;"></i>Đăng xuất</a>
                                         </div>
@@ -141,6 +141,7 @@
     <script src="~/Content/assets/js/custom.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Js/jsWishList.js"></script>
     <script src="~/Js/jsShopping.js"></script>
     <script>
         function myFunction() {
