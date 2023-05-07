@@ -32,8 +32,8 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Tên khách hàng</th>
-                        <th>Email</th>
+                        <th>Sản phẩm</th>
+                        <th>Hình ảnh</th>
                         <th style="text-align: center;">Trạng thái khuyến nghị</th>
                         <th style="text-align: center;">Đánh giá</th>
                         <th>Ngày tạo</th>
@@ -42,6 +42,24 @@
                 </thead>
 
                 <tbody>
+                    @if (Model != null)
+                    {
+                        var i = ((ViewBag.Page - 1) * ViewBag.PageSize) + 1; ;
+                        foreach (var item in Model)
+                        {
+                            <tr id="trow_@item.Id">
+                                <td>@i</td>
+                                <td class="text-center">@item.Comment</td>
+                            </tr>
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Không có bản ghi nào</td>
+                        </tr>
+                    }
                 </tbody>
 
             </table>

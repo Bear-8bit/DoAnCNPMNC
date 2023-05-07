@@ -350,3 +350,8 @@ C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateUser1.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.ModelReview.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RemoveUserProductRElation.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.ChangeDatabase.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateUserReview.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.TestReview.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.TestReview2.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RelationShipProduct.resources

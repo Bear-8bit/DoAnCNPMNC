@@ -170,6 +170,7 @@
     <Compile Include="Controllers\PromotionController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
+    <Compile Include="Controllers\UserReviewController.cs" />
     <Compile Include="Controllers\WishListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -326,6 +327,26 @@
     <Compile Include="Migrations\202305070811598_RemoveUserProductRElation.designer.cs">
       <DependentUpon>202305070811598_RemoveUserProductRElation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305070902255_ChangeDatabase.cs" />
+    <Compile Include="Migrations\202305070902255_ChangeDatabase.designer.cs">
+      <DependentUpon>202305070902255_ChangeDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305070909232_UpdateUserReview.cs" />
+    <Compile Include="Migrations\202305070909232_UpdateUserReview.designer.cs">
+      <DependentUpon>202305070909232_UpdateUserReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305070926085_TestReview.cs" />
+    <Compile Include="Migrations\202305070926085_TestReview.designer.cs">
+      <DependentUpon>202305070926085_TestReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305070928471_TestReview2.cs" />
+    <Compile Include="Migrations\202305070928471_TestReview2.designer.cs">
+      <DependentUpon>202305070928471_TestReview2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305071043472_RelationShipProduct.cs" />
+    <Compile Include="Migrations\202305071043472_RelationShipProduct.designer.cs">
+      <DependentUpon>202305071043472_RelationShipProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -352,6 +373,7 @@
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\SurveyViewModel.cs" />
     <Compile Include="Models\ThongKeViewModel.cs" />
+    <Compile Include="Models\UserReviewViewModel.cs" />
     <Compile Include="Models\Wishlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -3642,6 +3664,8 @@
     <Content Include="Views\Promotion\Index.cshtml" />
     <Content Include="Views\WishList\Index.cshtml" />
     <Content Include="Views\WishList\Partical_Item_WishList.cshtml" />
+    <Content Include="Views\UserReview\Partial_UserReview.cshtml" />
+    <Content Include="Views\UserReview\Partial_ReviewList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3790,6 +3814,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305070811598_RemoveUserProductRElation.resx">
       <DependentUpon>202305070811598_RemoveUserProductRElation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305070902255_ChangeDatabase.resx">
+      <DependentUpon>202305070902255_ChangeDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305070909232_UpdateUserReview.resx">
+      <DependentUpon>202305070909232_UpdateUserReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305070926085_TestReview.resx">
+      <DependentUpon>202305070926085_TestReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305070928471_TestReview2.resx">
+      <DependentUpon>202305070928471_TestReview2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305071043472_RelationShipProduct.resx">
+      <DependentUpon>202305071043472_RelationShipProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -51,6 +51,5 @@ namespace WebsiteBanDTOnline.Models.EF
         public virtual ProductCategory ProductCategory { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-        public virtual ICollection<UserReviews> UserReviews { get; set; }
     }
 }
