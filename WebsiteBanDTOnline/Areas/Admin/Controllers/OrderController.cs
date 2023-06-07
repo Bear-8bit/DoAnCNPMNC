@@ -42,8 +42,8 @@ namespace WebsiteBanDTOnline.Areas.Admin.Controllers
             var item = db.Orders.Find(id);
             if (item != null)
             {
-                db.Orders.Attach(item);
                 item.TypePayment = TrangThai;
+                db.Orders.Attach(item);
                 db.Entry(item).Property(x => x.TypePayment).IsModified = true;
                 db.SaveChanges();
                 return Json(new { message = "Success", Success = true });

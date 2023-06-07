@@ -82,22 +82,23 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Cập nhật trạng thái</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" data-dismiss="modal">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="txtOrderId" value="1" />
                     <div class="form-group">
                         <label>Trạng thái</label>
-                        <select class="form-control" id="ddTrangThai">
+                        <select class="form-control ddTrangThai" id="ddTrangThai">
                             <option value="2">Đã thanh toán</option>
+                            <option value="3">Đã thanh toán</option>
                         </select>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default btnClose" data-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-primary btnLuu" id="">Lưu</button>
+                    <button type="button" class="btn btn-primary btnLuu" id="btnLuu">Lưu</button>
                 </div>
             </div>
         </div>
@@ -117,9 +118,9 @@
 
 
         });
-        $('body').on('click', '.btnLuu', function () {
+        $('body').on('click', '#btnLuu', function () {
             var id = $('#txtOrderId').val();
-            var tt = $('#ddTrangThai').val();
+            var tt = $('.ddTrangThai').val();
             $.ajax({
                 url: "/Admin/Order/UpdateTT",
                 type: 'POST',

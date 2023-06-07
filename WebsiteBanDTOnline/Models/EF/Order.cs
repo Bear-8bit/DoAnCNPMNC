@@ -19,6 +19,7 @@ namespace WebsiteBanDTOnline.Models.EF
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Code { get; set; }
+        public int OrderStatus_Id { get; set; }
         [Required(ErrorMessage = "Tên khách hàng không được để trống")]
         public string CustomerName { get; set; }
         [Required(ErrorMessage = "Số điện thoại không được để trống")]
@@ -31,5 +32,6 @@ namespace WebsiteBanDTOnline.Models.EF
         public int TypePayment { get; set; }
 
         public ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual OrderStatus OrderStatus { get; set; }
     }
 }

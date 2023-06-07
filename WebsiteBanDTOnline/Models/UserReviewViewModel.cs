@@ -8,6 +8,7 @@ namespace WebsiteBanDTOnline.Models
 {
     public class UserReviewViewModel
     {   
+        public int Product_Id { get; set; }
         [Required(ErrorMessage = "Tên khách hàng không được để trống")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Email không được để trống")]

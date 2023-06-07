@@ -339,11 +339,6 @@ C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.AddCodeSurvey.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateSurvey1.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateSurvey2.resources
-C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.GenerateResource.cache
-C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.CoreCompileInputs.cache
-C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.CopyComplete
-C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.dll
-C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.pdb
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RemovePosts.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.AddPromotion.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RemoveSurveyUserID.resources
@@ -355,3 +350,13 @@ C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.TestReview.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.TestReview2.resources
 C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RelationShipProduct.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.OrderStatus.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateOrderStatus.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateOrder1.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.RemoveRelationshipReview.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.Migrations.UpdateREview.resources
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.GenerateResource.cache
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.CoreCompileInputs.cache
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.csproj.CopyComplete
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.dll
+C:\Users\egg\Desktop\DoAnCNPMNC\WebsiteBanDTOnline\obj\Debug\WebsiteBanDTOnline.pdb

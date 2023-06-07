@@ -152,6 +152,7 @@
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderSatusController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductReviewController.cs" />
@@ -347,6 +348,26 @@
     <Compile Include="Migrations\202305071043472_RelationShipProduct.designer.cs">
       <DependentUpon>202305071043472_RelationShipProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305071306368_OrderStatus.cs" />
+    <Compile Include="Migrations\202305071306368_OrderStatus.designer.cs">
+      <DependentUpon>202305071306368_OrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305071313281_UpdateOrderStatus.cs" />
+    <Compile Include="Migrations\202305071313281_UpdateOrderStatus.designer.cs">
+      <DependentUpon>202305071313281_UpdateOrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305071402018_UpdateOrder1.cs" />
+    <Compile Include="Migrations\202305071402018_UpdateOrder1.designer.cs">
+      <DependentUpon>202305071402018_UpdateOrder1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305090130021_RemoveRelationshipReview.cs" />
+    <Compile Include="Migrations\202305090130021_RemoveRelationshipReview.designer.cs">
+      <DependentUpon>202305090130021_RemoveRelationshipReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305090138530_UpdateREview.cs" />
+    <Compile Include="Migrations\202305090138530_UpdateREview.designer.cs">
+      <DependentUpon>202305090138530_UpdateREview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\Filter.cs" />
@@ -358,6 +379,7 @@
     <Compile Include="Models\EF\News.cs" />
     <Compile Include="Models\EF\Order.cs" />
     <Compile Include="Models\EF\OrderDetail.cs" />
+    <Compile Include="Models\EF\OrderStatus.cs" />
     <Compile Include="Models\EF\Product.cs" />
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\EF\ProductImage.cs" />
@@ -3591,6 +3613,7 @@
     <Content Include="Areas\Admin\Views\Promotion\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\User\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ProductReview\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrderSatus\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -3829,6 +3852,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305071043472_RelationShipProduct.resx">
       <DependentUpon>202305071043472_RelationShipProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305071306368_OrderStatus.resx">
+      <DependentUpon>202305071306368_OrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305071313281_UpdateOrderStatus.resx">
+      <DependentUpon>202305071313281_UpdateOrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305071402018_UpdateOrder1.resx">
+      <DependentUpon>202305071402018_UpdateOrder1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305090130021_RemoveRelationshipReview.resx">
+      <DependentUpon>202305090130021_RemoveRelationshipReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305090138530_UpdateREview.resx">
+      <DependentUpon>202305090138530_UpdateREview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

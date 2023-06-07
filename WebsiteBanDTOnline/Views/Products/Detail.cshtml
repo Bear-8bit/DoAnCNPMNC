@@ -115,7 +115,8 @@
                         <ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center" style="list-style:none;">
                             <li class="tab active" data-active-tab="tab_1"><span>Chi tiết</span></li>
                             @*<li class="tab" data-active-tab="tab_2"><span>Additional Information</span></li>*@
-                            <li class="tab" data-active-tab="tab_3"><span data-id="@Model.Id">Đánh giá</span></li>
+
+                            <li class="tab" data-active-tab="tab_3"><span>Đánh giá  </span></li>
                         </ul>
                     </div>
                 </div>
@@ -161,9 +162,8 @@
                             </div>
 
                             <!-- Add Review -->
-
                             <div class="col-lg-6 add_review_col">
-                                    @Html.Action("Partial_UserReview", "UserReview");
+                                @Html.Action("Partial_UserReview", "UserReview")
                             </div>
 
                         </div>
@@ -252,10 +252,25 @@
                     },
 
                 },
+
                 messages: {
                     'Name': 'Bạn không để trống trường này',
                     'Email': 'Email chưa hợp lệ',
                 }
-        });
+            });
+            $(function () {
+                $(".js-product-detail-link").click(function () {
+                    var productID = $(this).data("id");
+                    $.ajax({
+                        method: "GET",
+                        url: "/UserReviewView/Partial_UserReview",
+                        data: { id: productID },
+                        cache: false,
+                        success: function (e) {
+                            $(".js-product-details").html(e);
+                        }
+                    });
+                })
+            });
     </script>
 }

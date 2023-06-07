@@ -67,6 +67,27 @@ namespace WebsiteBanDTOnline.Controllers
             }
             return View();
         }
+        [HttpPost]
+        public ActionResult ChangePassword(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var check = db.Users.FirstOrDefault(x => x.Email == user.Email);
+                if (check == null)
+                {
+                    db.Configuration.ValidateOnSaveEnabled = false;
+                    db.Userxs.Add(user);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewBag.Error = "Email tồn tại";
+                    return View();
+                }
+            }
+            return View();
+        }
         public ActionResult LogOut()
         {
             Session.Abandon();

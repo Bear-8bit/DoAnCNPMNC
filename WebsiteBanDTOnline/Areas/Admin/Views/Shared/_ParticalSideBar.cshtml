@@ -82,12 +82,6 @@
                             <p>Sản phẩm</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="@Url.Action("Index","ProductReview")" class="nav-link" style="color: #fff;">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Đánh giá sản phẩm</p>
-                        </a>
-                    </li>
                 </ul>
 
             </li>
@@ -95,10 +89,19 @@
                 <a href="@Url.Action("Index","Order")" class="nav-link" style="color: #fff;">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
-                        Đơn hàng
-                        <span class="right badge badge-danger"></span>
+                        Quản lý đơn hàng
+                        <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
+              
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index","Order")" class="nav-link" style="color: #fff;">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Đơn hàng</p>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="@Url.Action("Index","Survey")" class="nav-link" style="color: #fff;">

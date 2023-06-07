@@ -41,7 +41,7 @@ namespace WebsiteBanDTOnline.Controllers
             }
             return Json(code);
         }
-        public ActionResult Partial_ReviewList(int? id)
+        public ActionResult Partial_ReviewList(int id)
         {
                 var items = db.UserReview.Where( x=> x.Product.Id == id).Take(12).ToList();
                 return PartialView(items);
